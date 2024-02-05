@@ -38,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "custom"
               }
             }
           },
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 389.5
   },
   "right": {
     "id": "6c41c276e1cef08b",
@@ -146,13 +146,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5034f63e158f0a23",
+  "active": "73a8e10806c20f2c",
   "lastOpenFiles": [
     "blog/回顾2019.md",
+    "blog/离职随笔2 .md",
+    "about.md",
+    "404.md",
+    "blog/2021 伊始：由一次找虐的面试引发的反思.md",
     "blog/离职随笔.md",
     "blog/离职随笔 2 .md",
-    "blog/重启.md",
-    "about.md",
-    "blog/2021 伊始：由一次找虐的面试引发的反思.md"
+    "blog/重启.md"
   ]
 }
