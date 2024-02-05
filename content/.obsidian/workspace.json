@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "6cde598a06d68162",
+    "type": "split",
+    "children": [
+      {
+        "id": "03bc586458b81060",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5034f63e158f0a23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/2021 伊始：由一次找虐的面试引发的反思.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac3ed20946471f28",
+    "type": "split",
+    "children": [
+      {
+        "id": "5235b0279deb1bc1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73a8e10806c20f2c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd60636c3a066bbb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5dda201bfd93f55c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6c41c276e1cef08b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0bcf52139b4fc59",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c6de74ae163d584",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/2021 伊始：由一次找虐的面试引发的反思.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "663502ac3814d1bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/2021 伊始：由一次找虐的面试引发的反思.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "da59355174dca3c9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0e6726bc28739776",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/2021 伊始：由一次找虐的面试引发的反思.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "5034f63e158f0a23",
+  "lastOpenFiles": [
+    "blog/回顾2019.md",
+    "blog/离职随笔.md",
+    "blog/离职随笔 2 .md",
+    "blog/重启.md",
+    "about.md",
+    "blog/2021 伊始：由一次找虐的面试引发的反思.md"
+  ]
+}

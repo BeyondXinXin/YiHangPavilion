@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'jq-font';
+  src: url('./jq.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'zhht font';
+  src: url('./zhht.ttf');
+}

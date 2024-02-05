@@ -1,0 +1,231 @@
+{
+  "statusBarOrder": [],
+  "ribbonBarOrder": [],
+  "fileExplorerOrder": {
+    "/": [
+      "Qt",
+      "Vtk",
+      "前端",
+      "编程语言",
+      "开源库",
+      "系统&&软件",
+      "独立游戏",
+      "开源项目",
+      "回溯反思",
+      "读书笔记",
+      "stylesheets",
+      "index.md",
+      "RoadMap.md",
+      "Todo"
+    ],
+    "Qt": [
+      "Qt/第三方模块",
+      "Qt/使用技巧",
+      "Qt/源码学习",
+      "Qt/自带控件",
+      "Qt/自定义控件"
+    ],
+    "Qt/第三方模块": [
+      "Qt/第三方模块/QCommandLineParser.md",
+      "Qt/第三方模块/QSharedMemory.md",
+      "Qt/第三方模块/QTAssistant.md",
+      "Qt/第三方模块/QTranslator.md",
+      "Qt/第三方模块/QuaZip.md",
+      "Qt/第三方模块/SQLite.md"
+    ],
+    "Qt/使用技巧": [
+      "Qt/使用技巧/利用Qt实现一个图片对比选择浏览器.md",
+      "Qt/使用技巧/排序.md",
+      "Qt/使用技巧/图像",
+      "Qt/使用技巧/deepin ubuntu 下编译quazip不通过.md",
+      "Qt/使用技巧/GithubImageHost图床本地缓存设计.md",
+      "Qt/使用技巧/qt    自己封装的动画QPropertyAnimation   QSequentialAnimationGroup.md",
+      "Qt/使用技巧/qt   invalid use of incomplete type ‘class  XXXX’.md",
+      "Qt/使用技巧/QT  代码规范Artistic Style.md",
+      "Qt/使用技巧/qt  单词 汉语拼音 首字母大写.md",
+      "Qt/使用技巧/qt  更改程序当前目录.md",
+      "Qt/使用技巧/QT  生成  pdf   QPdfWriter.md",
+      "Qt/使用技巧/qt  ubuntu ftp上传 所有文件夹和子文件.md",
+      "Qt/使用技巧/qt 汉字转拼音、简拼.md",
+      "Qt/使用技巧/Qt 获得随机文件夹 文件 名称.md",
+      "Qt/使用技巧/Qt 实现  打开 文件 文件夹 同一个接口.md",
+      "Qt/使用技巧/Qt 实现一个任意变量的写入写出到本地保存为 xxx.dat文件，实现软件自动保存.md",
+      "Qt/使用技巧/Qt 实现ini文件写入写出封装.md",
+      "Qt/使用技巧/qt 图表增加任意点.md",
+      "Qt/使用技巧/QT 网络相关整理.md",
+      "Qt/使用技巧/qt 文件操作 遍历所有文件夹下所有文件.md",
+      "Qt/使用技巧/Qt 学习记录：QApplication processEvents.md",
+      "Qt/使用技巧/qt 中widget 按钮等控件隐藏.md",
+      "Qt/使用技巧/QT 字体图标.md",
+      "Qt/使用技巧/Qt 自定义  一个读写变量函数的宏.md",
+      "Qt/使用技巧/Qt ApplicationAttribute 程序级别属性.md",
+      "Qt/使用技巧/qt creator 打开qss文件 语法高亮.md",
+      "Qt/使用技巧/Qt Json常用函数.md",
+      "Qt/使用技巧/Qt程序单元测试学习记录.md",
+      "Qt/使用技巧/Qt判断当前系统.md",
+      "Qt/使用技巧/Qt实现一个简单协议的封包和拆包.md",
+      "Qt/使用技巧/QT预编译加快速度.md",
+      "Qt/使用技巧/QT指定的字体不存在.md",
+      "Qt/使用技巧/ubuntu 下 QT调用脚本无效    切换默认sh为bash或者dash.md",
+      "Qt/使用技巧/windos下Qt Creator.md"
+    ],
+    "Qt/使用技巧/图像": [
+      "Qt/使用技巧/图像/利用Qt实现Gif转预览图片.md",
+      "Qt/使用技巧/图像/Opencv转QImage.md",
+      "Qt/使用技巧/图像/qt  图像组合  图像变灰度  图像透明.md",
+      "Qt/使用技巧/图像/QT  scaled修改图片，缩小后图像信息损失过多.md",
+      "Qt/使用技巧/图像/Qt 二值图背景透明，前景上色并找到重心.md",
+      "Qt/使用技巧/图像/Qt 图像数据相关类.md"
+    ],
+    "Qt/源码学习": [
+      "Qt/源码学习/析构机制.md",
+      "Qt/源码学习/线程使用心得.md",
+      "Qt/源码学习/元对象系统.md",
+      "Qt/源码学习/IPC进程间通讯.md",
+      "Qt/源码学习/QFileSystemModel.md",
+      "Qt/源码学习/QStringListModel.md",
+      "Qt/源码学习/QT自定义属性Q_PROPERTY.md"
+    ],
+    "Qt/自带控件": [
+      "Qt/自带控件/QDialog.md",
+      "Qt/自带控件/QComboBox.md",
+      "Qt/自带控件/QGraphicsScene.md",
+      "Qt/自带控件/QLineEdit.md",
+      "Qt/自带控件/QPlainTextEdit.md",
+      "Qt/自带控件/QScrollAreaqt.md",
+      "Qt/自带控件/QTextedit.md",
+      "Qt/自带控件/QTreeWidget-View.md",
+      "Qt/自带控件/QWidget.md"
+    ],
+    "Qt/自定义控件": [
+      "Qt/自定义控件/利用Qt 画牛眼图.md",
+      "Qt/自定义控件/利用Qt Creator 做一个简单的python IDE.md",
+      "Qt/自定义控件/利用Qt实现一个多图选择目标点的demo.md",
+      "Qt/自定义控件/利用Qt实现Https网络请求.md",
+      "Qt/自定义控件/利用QTimer实现Dicom 播放功能.md",
+      "Qt/自定义控件/利用vtk Qt实现一个可以调用python命令的控制台.md",
+      "Qt/自定义控件/双滑块.md",
+      "Qt/自定义控件/Com串口通讯.md",
+      "Qt/自定义控件/FTP上传文件.md",
+      "Qt/自定义控件/QGraphicsView 按住鼠标实现帧数切换.md",
+      "Qt/自定义控件/Qt  带有图片的listwidget.md",
+      "Qt/自定义控件/qt  弹出标签自动渐渐消失.md",
+      "Qt/自定义控件/qt  桌面悬浮球  ToolTip  右键菜单.md",
+      "Qt/自定义控件/qt  自带计算器.md",
+      "Qt/自定义控件/qt  自定义 菜单栏 快捷方式.md",
+      "Qt/自定义控件/QT 标签连接网页.md",
+      "Qt/自定义控件/QT 任意拖拽窗口（帮助、关于）.md",
+      "Qt/自定义控件/qt 生成日志 日志浏览  demo.md",
+      "Qt/自定义控件/Qt 实现  屏幕分割显示布局，可以任意拖拽显示.md",
+      "Qt/自定义控件/Qt 实现 RubberBandDrag 框选.md",
+      "Qt/自定义控件/Qt 实现一个 文件监听线程.md",
+      "Qt/自定义控件/Qt 图片分块并增加移入选中效果.md",
+      "Qt/自定义控件/QT 艺术字  扭动的字体    QBasicTimer 和timerEvent使用.md",
+      "Qt/自定义控件/Qt 直线调整控件 边界调软修正.md",
+      "Qt/自定义控件/Qt Designer 样式表 类型选择器无效.md",
+      "Qt/自定义控件/QT（windos）显示cpu和内存信息.md",
+      "Qt/自定义控件/Qt自定义属性 绑定 QMenu实现菜单栏快速设置属性.md"
+    ],
+    "Vtk": [
+      "Vtk/类型转换",
+      "Vtk/使用技巧",
+      "Vtk/坐标变换",
+      "Vtk/CPR",
+      "Vtk/DICOM",
+      "Vtk/Filter",
+      "Vtk/python",
+      "Vtk/Qt",
+      "Vtk/VR",
+      "Vtk/VTK-9.0",
+      "Vtk/Widget"
+    ],
+    "编程语言": [
+      "编程语言/抽象思维",
+      "编程语言/C++",
+      "编程语言/CUDA.md",
+      "编程语言/LibTorch.md",
+      "编程语言/Python.md",
+      "编程语言/Rust.md",
+      "编程语言/Unity.md"
+    ],
+    "开源项目": [
+      "开源项目/KISSDicomViewer.md",
+      "开源项目/GithubImageHost.md",
+      "开源项目/OpenBrowser.md",
+      "开源项目/MyTools.md"
+    ],
+    "Todo/模板": [
+      "Todo/模板/图片.md",
+      "Todo/模板/图片-注释.md"
+    ],
+    "开源库": [
+      "开源库/index.md",
+      "开源库/CGAL",
+      "开源库/DCMTK",
+      "开源库/ITK",
+      "开源库/OpenCV",
+      "开源库/HALCON"
+    ],
+    "开源库/OpenCV": [
+      "开源库/OpenCV/快速测试的图片浏览器.md",
+      "开源库/OpenCV/彩色通道分离、合并，实现区域标注.md",
+      "开源库/OpenCV/仿照小蚂蚁实现图像增强、滤波.md",
+      "开源库/OpenCV/求线段上任意一点的切线和垂线.md",
+      "开源库/OpenCV/提取最大连通域.md",
+      "开源库/OpenCV/伪彩图调整上下限.md",
+      "开源库/OpenCV/ubuntu下show报错.md",
+      "开源库/OpenCV/cvMat转QImage.md"
+    ],
+    "开源库/CGAL": [
+      "开源库/CGAL/编译安装.md",
+      "开源库/CGAL/OFF与STL相互转换.md",
+      "开源库/CGAL/表面细化.md",
+      "开源库/CGAL/提取中心线.md",
+      "开源库/CGAL/自相交检测.md",
+      "开源库/CGAL/补洞.md"
+    ],
+    "开源库/DCMTK": [
+      "开源库/DCMTK/编译安装.md",
+      "开源库/DCMTK/控制台信息过多.md",
+      "开源库/DCMTK/DCM标签可视化.md",
+      "开源库/DCMTK/修改UID.md",
+      "开源库/DCMTK/dcm转图片.md",
+      "开源库/DCMTK/PACS.md"
+    ],
+    "开源库/ITK": [
+      "开源库/ITK/操作dcm标签.md",
+      "开源库/ITK/多张图转mha.md",
+      "开源库/ITK/最短路径提取.md"
+    ],
+    "编程语言/C++": [
+      "编程语言/C++/语法规则.md",
+      "编程语言/C++/Cmake.md",
+      "编程语言/C++/杂谈"
+    ],
+    "系统&&软件": [
+      "系统&&软件/Windos装机软件.md",
+      "系统&&软件/VSCode.md",
+      "系统&&软件/VisualStudio.md",
+      "系统&&软件/Obsidian.md",
+      "系统&&软件/GIT&&SVN.md",
+      "系统&&软件/GitHubActions.md",
+      "系统&&软件/MarkDown.md",
+      "系统&&软件/网站建设",
+      "系统&&软件/Linux"
+    ],
+    "回溯反思/2023": [
+      "回溯反思/2023/重启.md",
+      "回溯反思/2023/回顾2023.md"
+    ],
+    "前端": [
+      "前端/NodeJs.md",
+      "前端/index.md",
+      "前端/HTML+CSS",
+      "前端/前端英语词汇.md"
+    ]
+  },
+  "actionBarOrder": {},
+  "autoHide": false,
+  "autoHideDelay": 2000,
+  "dragDelay": 200
+}

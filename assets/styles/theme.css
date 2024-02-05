@@ -1,0 +1,25 @@
+:root {
+  --common-transition: all 0.3s ease;
+  --common-rd: 0.5em;
+  --common-bg: rgba(34, 171, 129, 0.2);
+  --common-c-table-0: rgba(52, 211, 83, 0.2);
+  --common-c-table-1: rgba(28, 74, 54, 0.2);
+  --common-c-table-2: rgba(34, 171, 129, 0.2);
+  --common-c-quote: rgb(68, 76, 86); /* 引用 */
+  --common-bd: rgb(201, 199, 194);
+}
+
+html {
+  --c-bg: rgb(34, 39, 46);
+  --c-bg-main: rgb(28, 33, 41);
+  --bg-input: rgb(34, 39, 46);
+
+  --c-primary: rgb(222, 227, 231);
+  --c-highlight : rgb(83, 155, 245);
+  --c-lowlight : rgb(78, 137, 199);
+
+  --c-selection: rgba(46, 76, 119, 52);
+  --c-scrollbar: rgb(159, 159, 159);
+  --c-scrollbar-bg: rgb(44, 44, 44);
+  --c-scrollbar-hover: rgb(209, 209, 209);
+}
