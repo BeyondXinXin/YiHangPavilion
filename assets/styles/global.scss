@@ -1,0 +1,33 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--c-scrollbar-bg);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
+}
+
+::selection {
+  background: var(--c-selection);
+}
+
+html {
+  line-height: 1.75;
+  color: var(--c-primary);
+  background-color: var(--c-bg);
+  scroll-behavior: smooth;
+}
