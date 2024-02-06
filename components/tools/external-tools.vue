@@ -20,7 +20,7 @@
 </template>
   
 <script setup>
-import tools from './external-tools';
+import tools from './external-tools-data';
 
 </script>
   

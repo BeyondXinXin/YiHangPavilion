@@ -10,6 +10,5 @@
 <script setup lang="ts">
 const props = defineProps(['article'])
 import DocTitle from './doc-title.vue';
-import DocFooter from './doc-footer.vue';
 </script>
 

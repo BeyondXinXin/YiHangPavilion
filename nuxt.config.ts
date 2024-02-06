@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     '@/assets/styles/markdown.scss',
   ],
   devtools: {
-    enabled: false,
+    enabled: true,
   },
   vite: {
     server: {

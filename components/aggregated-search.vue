@@ -1,19 +1,9 @@
 <template>
   <div class="flex flex-col items-center text-lg ">
 
-    <div class="flex-1 mt-25 mb-4 max-w-120">
+    <MainClock/>
 
-      <ul class="flex gap-1em w-full">
-        <li v-for="(url, provider) in providers" :key="provider" @click="setProvider(provider)" :class="[
-          'w-1/2 cursor-pointer',
-          currentProvider === provider && !readOnly ? 'text-c_highlight' : 'hover:text-c_lowlight',
-        ]">
-          {{ provider }}
-        </li>
-      </ul>
-    </div>
-
-    <div class="relative w-[600px] mx-auto">
+    <div class="relative w-[600px] mx-auto mt-15 ">
       <svg class=" top-0 left-3 w-6 h-6 mt-3 absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
         stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
@@ -26,11 +16,28 @@
          focus:ring-blue-500 focus:border-blue-500" type="text" />
     </div>
 
+    <div class="flex-1 mb-4 max-w-120 mt-5 ">
+
+      <ul class="flex gap-1em w-full">
+        <li v-for="(url, provider) in providers" :key="provider" @click="setProvider(provider)" :class="[
+          'w-1/2 cursor-pointer',
+          currentProvider === provider && !readOnly ? 'text-c_highlight' : 'hover:text-c_lowlight',
+        ]">
+          {{ provider }}
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
 <script>
+import MainClock from './simple-clock.vue'
+
 export default {
+  components: {
+    MainClock
+  },
   data() {
     return {
       searchQuery: '',
