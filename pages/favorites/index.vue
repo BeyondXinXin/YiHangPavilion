@@ -4,7 +4,8 @@
     <div class="fixed top-30 left-50 flex flex-col w-auto h-auto overflow-auto m-0 p-0 z-5">
       <div
         class="pl-2 hover:cursor-pointer border-l-3 border-transparent hover:border-l-3 hover:border-orange hover:color-orange"
-        v-for="(tool, index) in tools" :key="index" :id="index" :class="{ nav_active: index == curIndex }">
+        v-for="(tool, index) in tools" :key="index" :id="index" >
+        <!-- :class="{ nav_active: index == curIndex }" -->
         <a @click="scrollToElement(tool.id)">{{ tool.name }}</a>
       </div>
     </div>
