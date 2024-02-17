@@ -1,7 +1,7 @@
 import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxt/content'],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxt/content', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
   app: {
     rootId: 'nuxt-root',
     head: {
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     '@/assets/styles/markdown.scss',
   ],
   devtools: {
-    enabled: true,
+    enabled: false,
   },
   vite: {
     server: {
