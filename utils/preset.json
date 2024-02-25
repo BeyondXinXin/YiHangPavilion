@@ -11,7 +11,7 @@
         { "icon": "", "name": "文心一言", "link": "https://yiyan.baidu.com/" },
         { "icon": "", "name": "ChatGPT", "link": "https://chat.openai.com/" },
         { "icon": "", "link": "https://www.bilibili.com/", "name": "哔哩哔哩" },
-        { "icon": "", "link": "https://www.youtube.com/", "name": "YouTube" }
+        { "icon": "", "link": "https://wx.mail.qq.com/list/readtemplate?name=account_list.html#/", "name": "QQ邮箱" }
       ]
     },
     {
@@ -73,7 +73,8 @@
       "name": "娱乐",
       "collection": [
         { "icon": "", "link": "https://www.bilibili.com/", "name": "哔哩哔哩" },
-        { "icon": "", "link": "https://v.qq.com/", "name": "腾讯视频" }
+        { "icon": "", "link": "https://v.qq.com/", "name": "腾讯视频" },
+        { "icon": "", "link": "https://www.youtube.com/", "name": "YouTube" }
       ]
     },
     {
