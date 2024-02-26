@@ -50,12 +50,23 @@ export default defineConfig({
       },
     }),
     presetAttributify(),
+
     presetIcons({
       extraProperties: {
         display: 'inline-block',
         'vertical-align': 'middle',
-        width: '1.2em',
-        height: '1.2em',
+      },
+      customizations: {
+        iconCustomizer(collection, icon, props) {
+          if (collection === 'simple-icons') {
+            props.width = '1.6em';
+            props.height = '1.6em';
+          }
+          if (collection === 'icon-park-outline') {
+            props.width = '1.6em'
+            props.height = '1.6em'
+          }
+        },
       },
     }),
   ],

@@ -28,6 +28,7 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@types/node": "^20.11.10",
     "@unocss/nuxt": "^0.57.6",
+    "@unocss/preset-icons": "^0.58.5",
     "@vueuse/core": "^10.7.2",
     "@vueuse/nuxt": "^10.7.2",
     "autoprefixer": "^10.4.17",
