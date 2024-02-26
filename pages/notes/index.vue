@@ -6,7 +6,7 @@
 
       <div class="border-b-1 border-transparent hover:border-b-1 hover:border-orange" v-for="subclass in note.subclass"
         :key="subclass.id">
-        <div class="flex flex-row gap-4">
+        <div class="flex flex-row">
           <div class="flex w-[120px] justify-center">【 {{ subclass.name }} 】</div>
           <div class="flex w-[100px] text-right color-gray">Document</div>
           <a v-for="link1 in subclass.document" :href="link1.link" :key="link1.link" target="_blank"

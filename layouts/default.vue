@@ -8,14 +8,14 @@
       <slot />
     </main>
 
-    <CustomFooter />
+    <Footer />
 
   </div>
 </template>
 
 <script lang="ts" setup>
 import NavBar from './components/nav-bar.vue';
-import CustomFooter from './components/custom-footer.vue';
+import Footer from './components/footer.vue';
 </script>
 
 <style scoped>
