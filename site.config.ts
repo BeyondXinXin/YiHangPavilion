@@ -18,7 +18,7 @@ export const navLinks = [
   },
   {
     title: '知易馆',
-    path: '/notes',
+    path: '/docs',
     external: false,
   },
   {
