@@ -1,6 +1,6 @@
 <template>
-    <div class="border-b-1 border-transparent hover:border-b-1 hover:border-orange"
-        v-for="subclass in docsStore.data[curIndex].subclass" :subclass="subclass.id">
+    <client-only class="border-b-1 border-transparent hover:border-b-1 hover:border-orange" v-for="subclass in subclassData"
+        :key="subclass.id">
 
         <div class="flex flex-row gap-4">
             <div class="flex w-[120px] justify-center">【 {{ subclass.name }} 】</div>
@@ -19,16 +19,22 @@
             </div>
         </div>
 
-    </div>
+
+    </client-only>
 </template>
-  
-  
+
 <script setup>
+import { ref, watchEffect } from 'vue';
 import { useDocsStore } from '~/store/docs';
 
 const docsStore = useDocsStore();
-docsStore.initializeDocs();
-const curIndex = computed(() => docsStore.curIndex);
+const subclassData = ref([]);
+
+watchEffect(() => {
+    const curIndex = docsStore.curIndex;
+    const data = docsStore.data[curIndex];
+    subclassData.value = data?.subclass || [];
+});
 
 </script>
-  
+
