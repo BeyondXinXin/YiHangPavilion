@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/易航阁：我的在线家园初现雏形.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": true
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/易航阁：我的在线家园初现雏形.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/易航阁：我的在线家园初现雏形.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/易航阁：我的在线家园初现雏形.md"
+                "file": "about.md"
               }
             }
           }
@@ -160,13 +160,13 @@
   },
   "active": "5034f63e158f0a23",
   "lastOpenFiles": [
+    "blog/重启.md",
+    "404.md",
     "about.md",
     "blog/易航阁：我的在线家园初现雏形.md",
-    "blog/重启.md",
     "blog/离职随笔2 .md",
     "blog/2021 伊始：由一次找虐的面试引发的反思.md",
     "blog/回顾2019.md",
-    "404.md",
     "blog/离职随笔.md",
     "blog/离职随笔 2 .md"
   ]
