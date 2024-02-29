@@ -1,13 +1,8 @@
----
-updated: 2024-02-06T12:08
-date: 2024-01-27T22:12
----
-
 # 易航阁
 
 > 一个自己用的工作台。  
 
-导航站这东西每个人都有自己的方式，找不到满意的索性自己做。
+网站开源 [YiHangPavilion](https://github.com/BeyondXinDeveloperHub/YiHangPavilion) 。导航站这东西每个人都有自己的习惯，一直找不到合适的主页。趁着想学习前端，自己动手做一个。 
 
 |        |                  |
 | :----: | :--------------- |
@@ -21,23 +16,10 @@ date: 2024-01-27T22:12
 
 ---
 
-网站开源。前端0基础，做个静态网站花了2月才做完。  
-从网站名字开始到每一个功能实现和样式设置就是通过不断问 `gpt(3.5)` 和 `文心一言(4.0)` 来边学习边实现。所谓的前端三剑客`Html`、`CSS`、`JS`到现在都不咋会。
+参考项目:  
+  * [abinWeb](https://github.com/web-abin/abinWeb)
+  * [nuxt-blog](https://github.com/chansee97/nuxt-blog)
+  * [rotationconverter](https://github.com/gaschler/rotationconverter)
+  * [moon](https://github.com/jic999/moon-web-start)
 
-抄了很多其他项目:  
-* [abinWeb](https://github.com/web-abin/abinWeb)
-* [nuxt-blog](https://github.com/chansee97/nuxt-blog)
-* [rotationconverter](https://github.com/gaschler/rotationconverter)
 
----
-
-做网站还蛮有意思的。开四个坑，看看什么时候能填完，把下边改成链接。
-
-- 卦韵学庐  
-  专注于易经八卦的学习与测算，提供相关的资料和工具，帮助用户深入理解和掌握易经的智慧。
-- 针经斋舍  
-  致力于中医针灸的学习和研究，分享针灸知识、技术和实践经验，为对中医针灸感兴趣的用户提供学习和交流的平台。
-- 语韵书阁  
-  专注于英语学习，特别是音标等方面。提供丰富的学习资源、教学视频和练习材料，帮助用户提升英语发音和口语能力。
-- 琴风雅居  
-  专注于口琴学习，分享口琴演奏技巧、乐谱和教学视频。为口琴爱好者提供学习和交流的平台，促进口琴艺术的传承和 发展。
