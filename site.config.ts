@@ -7,37 +7,37 @@ export const siteConfig = {
 
 export const navLinks = [
   {
-    title: '启程轩',
+    title: '首页',
     path: '/',
     external: false,
   },
   {
-    title: '易行桥',
+    title: '收藏',
     path: '/favorites',
     external: false,
   },
   {
-    title: '知易馆',
+    title: '文档',
     path: '/docs',
     external: false,
   },
   {
-    title: '易用斋',
+    title: '工具',
     path: '/tools',
     external: false,
   },
   {
-    title: '言易榭',
+    title: '博客',
     path: '/blog',
     external: false,
   },
   {
-    title: '悟易亭',
+    title: '笔记',
     path: 'https://blog.beyondxin.top/',
     external: true,
   },
   {
-    title: '易览',
+    title: '关于',
     path: '/about',
     external: false,
   },

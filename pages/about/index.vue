@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-70ch m-auto">
+  <div class="w-600px m-auto ">
     <section class="prose">
       <ContentDoc path="about" class="slide-enter-content" />
     </section>
