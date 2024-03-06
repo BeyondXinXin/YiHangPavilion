@@ -1,14 +1,15 @@
 <template>
   <div class="w-[1200px] pt-10">
-    <div class="flex flex-col gap-18px relative px-5">
-      <section v-for="(tool, index) in bookmarkStore.bookmarks" :key="tool" :id="tool.id">
-        <div class="pl-20px flex flex-row gap-2px">
-          <header class="flex w-[80px] font-bold">{{ tool.name }}</header>
-          <div class="flex w-[1080px] flex-wrap gap-2px">
-            <SimpleSiteItemCard v-for="link in tool.collection" :key="link.link" :link="link" />
-          </div>
+
+    <div class="flex flex-col gap-10px">
+
+      <div v-for="(tool, index) in bookmarkStore.bookmarks" :key="tool" :id="tool.id" class="flex flex-row">
+        <header class="flex w-[100px] justify-center font-bold">{{ tool.name }}</header>
+        <div class="grid grid-cols-6 gap-10px">
+          <SimpleSiteItemCard v-for="link in tool.collection" :key="link.link" :link="link" class="" />
         </div>
-      </section>
+      </div>
+
     </div>
 
   </div>

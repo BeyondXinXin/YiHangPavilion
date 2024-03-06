@@ -7,13 +7,12 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint . --fix"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@iconify-json/icon-park-outline": "^1.1.15",
-    "@iconify-json/simple-icons": "^1.1.90",
     "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/simple-icons": "^1.1.90",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/reset": "^0.57.6",
     "date-fns": "^2.30.0",
@@ -21,10 +20,10 @@
     "pinia-plugin-persistedstate": "^3.2.1",
     "solarlunar-es": "^1.0.9",
     "three": "^0.160.1",
+    "vuedraggable": "^4.1.0",
     "zipson": "^0.2.12"
   },
   "devDependencies": {
-    "@chansee97/eslint-config-vue": "^0.3.5",
     "@nuxt/content": "^2.11.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@types/node": "^20.11.10",
@@ -33,7 +32,6 @@
     "@vueuse/core": "^10.7.2",
     "@vueuse/nuxt": "^10.7.2",
     "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
     "lint-staged": "^15.2.0",
     "nuxt": "^3.9.3",
     "postcss": "^8.4.33",
@@ -43,13 +41,5 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "*.vue": [
-      "eslint --fix"
-    ]
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center text-lg ">
+  <div class="flex flex-col items-center text-lg">
 
     <MainClock />
 

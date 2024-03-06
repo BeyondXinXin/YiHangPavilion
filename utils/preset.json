@@ -1,52 +1,6 @@
 {
   "bookmarks": [
     {
-      "id": "general",
-      "name": "常用",
-      "collection": [
-        {
-          "icon": "",
-          "name": "百度",
-          "link": "https://www.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "谷歌",
-          "link": "http://www.google.com/"
-        },
-        {
-          "icon": "",
-          "name": "GitHub",
-          "link": "https://github.com/BeyondXinXin"
-        },
-        {
-          "icon": "",
-          "name": "百度翻译",
-          "link": "https://fanyi.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "文心一言",
-          "link": "https://yiyan.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "ChatGPT",
-          "link": "https://chat.openai.com/"
-        },
-        {
-          "icon": "",
-          "link": "https://www.bilibili.com/",
-          "name": "哔哩哔哩"
-        },
-        {
-          "icon": "",
-          "link": "https://wx.mail.qq.com/list/readtemplate?name=account_list.html#/",
-          "name": "QQ邮箱"
-        }
-      ]
-    },
-    {
       "id": "entertainment",
       "name": "娱乐",
       "collection": [
@@ -78,13 +32,13 @@
         },
         {
           "icon": "",
-          "link": "https://ecs.console.aliyun.com/home#/",
-          "name": "阿里云"
+          "link": "https://dashi.163.com/",
+          "name": "邮箱大师"
         },
         {
-          "icon": "https://www.bt.cn/favicon.ico",
-          "link": "https://101.200.221.236:29149/",
-          "name": "宝塔"
+          "icon": "",
+          "link": "https://ecs.console.aliyun.com/home#/",
+          "name": "阿里云"
         },
         {
           "icon": "",
@@ -95,11 +49,6 @@
           "icon": "",
           "link": "https://drive.google.com/",
           "name": "Google硬盘"
-        },
-        {
-          "icon": "",
-          "link": "https://dashi.163.com/",
-          "name": "邮箱大师"
         }
       ]
     },
@@ -300,6 +249,52 @@
           "icon": "",
           "link": "https://www.gameui.net/",
           "name": "GameUI.net"
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "name": "常用",
+      "collection": [
+        {
+          "icon": "",
+          "name": "百度",
+          "link": "https://www.baidu.com/"
+        },
+        {
+          "icon": "",
+          "name": "谷歌",
+          "link": "http://www.google.com/"
+        },
+        {
+          "icon": "",
+          "name": "GitHub",
+          "link": "https://github.com/BeyondXinXin"
+        },
+        {
+          "icon": "",
+          "name": "百度翻译",
+          "link": "https://fanyi.baidu.com/"
+        },
+        {
+          "icon": "",
+          "name": "文心一言",
+          "link": "https://yiyan.baidu.com/"
+        },
+        {
+          "icon": "",
+          "name": "ChatGPT",
+          "link": "https://chat.openai.com/"
+        },
+        {
+          "icon": "",
+          "link": "https://www.bilibili.com/",
+          "name": "哔哩哔哩"
+        },
+        {
+          "icon": "",
+          "link": "https://wx.mail.qq.com/list/readtemplate?name=account_list.html#/",
+          "name": "QQ邮箱"
         }
       ]
     }
