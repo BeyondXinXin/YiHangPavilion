@@ -5,7 +5,7 @@
 每个人都有自己的习惯，一直找不到合适的主页。  
 动手做一个，正好学习前端。  
   
-网站开源 [YiHangPavilion](https://github.com/BeyondXinDeveloperHub/YiHangPavilion)  
+网站开源 [YiHangPavilion](https://github.com/BeyondXinXin/YiHangPavilion)  
 
 
 
