@@ -52,6 +52,11 @@
           "icon": "https://avatars.githubusercontent.com/u/905434?v=4"
         },
         {
+          "icon": "https://picx.beyondxin.top/logo.png",
+          "name": "Picx",
+          "link": "https://picx.beyondxin.top/"
+        },
+        {
           "icon": "",
           "name": "游戏开发",
           "link": "https://www.haroldserrano.com/blog/best-books-to-develop-a-game-engine"
@@ -247,7 +252,7 @@
           "link": "http://www.google.com/"
         },
         {
-          "icon": "",
+          "icon": "https://github.githubassets.com/assets/apple-touch-icon-92bd46d04241.png",
           "name": "GitHub",
           "link": "https://github.com/BeyondXinXin"
         },
@@ -282,9 +287,9 @@
           "name": "163邮箱"
         },
         {
-          "icon": "https://picx.beyondxin.top/logo.png",
-          "name": "Picx",
-          "link": "https://picx.beyondxin.top/"
+          "icon": "",
+          "link": "https://jaql42cvmrt.feishu.cn/wiki/OQPKwQi6cif7Kpk3G0BcRLAnn9g",
+          "name": "程序人生"
         }
       ]
     }
