@@ -18,10 +18,8 @@
 </template>  
 
 <script>
-import CoordinateConverter from '~/components/tools/coordinate-converter.vue';
-import BaseConverter from '~/components/tools/base-converter.vue';
-import RandomPasswordGenerator from '~/components/tools/random-password.vue';
 import ExternalTools from '~/components/tools/external-tools.vue';
+import CoordinateConverter from '~/components/tools/coordinate-converter.vue';
 
 export default {
   data() {
@@ -29,8 +27,6 @@ export default {
       tools: [
         { name: '外部工具', component: ExternalTools },
         { name: '坐标转换', component: CoordinateConverter },
-        { name: '进制转换', component: BaseConverter },
-        { name: '随机密码', component: RandomPasswordGenerator },
       ],
       selectedToolIndex: 0,
     };
