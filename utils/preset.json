@@ -101,9 +101,14 @@
           "name": "FASTLINK"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://lf.lanfan.cc/",
           "link": "https://lf.lanfan.cc/auth/login",
           "name": "蓝帆云"
+        },
+        {
+          "icon": "",
+          "link": "https://www.google.com/adsense",
+          "name": "Google AdSense"
         }
       ]
     },
