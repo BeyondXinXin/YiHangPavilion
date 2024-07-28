@@ -82,12 +82,12 @@
         },
         {
           "icon": "",
-          "link": "101.200.221.236:29149",
+          "link": "https://101.200.221.236:29149",
           "name": "宝塔1"
         },
         {
           "icon": "",
-          "link": "12.126.73.204:42078/b3e8570f",
+          "link": "https://112.126.73.204:42078/b3e8570f",
           "name": "宝塔2"
         },
         {
@@ -158,7 +158,7 @@
           "link": "http://www.google.com/"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://mail.qq.com/&size=16",
           "link": "https://wx.mail.qq.com/",
           "name": "QQ邮箱"
         },
@@ -208,7 +208,7 @@
           "name": "YouTube"
         },
         {
-          "icon": "https://github.com/",
+          "icon": "https://github.com/favicon.ico",
           "name": "GitHub",
           "link": "https://github.com/BeyondXinXin"
         },
