@@ -45,7 +45,7 @@
           "link": "https://console.bce.baidu.com/"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bailian.console.aliyun.com",
           "name": "阿里云百炼",
           "link": "https://bailian.console.aliyun.com/"
         },
@@ -81,17 +81,17 @@
           "name": "七牛云"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
           "link": "https://101.200.221.236:29149",
           "name": "宝塔1"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
           "link": "https://112.126.73.204:42078/b3e8570f",
           "name": "宝塔2"
         },
         {
-          "icon": "",
+          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://about.gitea.com/",
           "link": "https://gitea.beyondxin.top",
           "name": "Gitea"
         },
