@@ -1,84 +1,6 @@
 {
   "bookmarks": [
     {
-      "id": "entertainment",
-      "name": "娱乐",
-      "collection": [
-        {
-          "icon": "",
-          "link": "https://www.bilibili.com/",
-          "name": "哔哩哔哩"
-        },
-        {
-          "icon": "",
-          "link": "https://v.qq.com/",
-          "name": "腾讯视频"
-        },
-        {
-          "icon": "",
-          "link": "https://www.youtube.com/",
-          "name": "YouTube"
-        }
-      ]
-    },
-    {
-      "id": "serve",
-      "name": "服务器",
-      "collection": [
-        {
-          "icon": "",
-          "link": "https://ecs.console.aliyun.com/home#/",
-          "name": "阿里云"
-        },
-        {
-          "icon": "",
-          "link": "http://www.fastlink9.cc/",
-          "name": "FASTLINK"
-        },
-        {
-          "icon": "",
-          "link": "https://drive.google.com/",
-          "name": "Google硬盘"
-        }
-      ]
-    },
-    {
-      "id": "blog",
-      "name": "博客",
-      "collection": [
-        {
-          "name": "阮一峰",
-          "link": "https://github.com/ruanyf/weekly",
-          "icon": "https://avatars.githubusercontent.com/u/905434?v=4"
-        },
-        {
-          "icon": "https://picx.beyondxin.top/logo.png",
-          "name": "Picx",
-          "link": "https://picx.beyondxin.top/"
-        },
-        {
-          "icon": "",
-          "name": "游戏开发",
-          "link": "https://www.haroldserrano.com/blog/best-books-to-develop-a-game-engine"
-        },
-        {
-          "icon": "",
-          "name": "影像学",
-          "link": "https://martinopilia.com/"
-        },
-        {
-          "icon": "",
-          "name": "图形学",
-          "link": "https://tavianator.com/index.html"
-        },
-        {
-          "icon": "",
-          "name": "CSDN",
-          "link": "https://blog.csdn.net/a15005784320"
-        }
-      ]
-    },
-    {
       "id": "ai",
       "name": "AI",
       "collection": [
@@ -89,8 +11,23 @@
         },
         {
           "icon": "",
+          "name": "通义千问",
+          "link": "https://tongyi.aliyun.com/qianwen"
+        },
+        {
+          "icon": "",
+          "name": "豆包",
+          "link": "https://www.doubao.com/chat/"
+        },
+        {
+          "icon": "",
           "name": "ChatGPT",
           "link": "https://chat.openai.com/"
+        },
+        {
+          "icon": "",
+          "name": "Gemini",
+          "link": "https://gemini.google.com/app"
         },
         {
           "icon": "",
@@ -101,139 +38,108 @@
           "icon": "",
           "name": "DALL·E 3",
           "link": "https://cn.bing.com/images/create?FORM=GENEXP"
+        },
+        {
+          "icon": "",
+          "name": "百度智能云",
+          "link": "https://console.bce.baidu.com/"
+        },
+        {
+          "icon": "",
+          "name": "阿里云百炼",
+          "link": "https://bailian.console.aliyun.com/"
+        },
+        {
+          "icon": "",
+          "name": "字节火山引擎",
+          "link": "https://console.volcengine.com/"
         }
       ]
     },
     {
-      "id": "front",
-      "name": "前端",
+      "id": "serve",
+      "name": "服务器",
       "collection": [
         {
-          "name": "ZDZN",
-          "icon": "https://besticon-demo.herokuapp.com/icon?url=https://www.zdzn.net/&size=80..120..200",
-          "link": "https://www.zdzn.net/"
+          "icon": "",
+          "link": "https://ecs.console.aliyun.com",
+          "name": "阿里云"
         },
         {
           "icon": "",
-          "link": "https://www.runoob.com/",
-          "name": "菜鸟教程"
+          "link": "https://cloud.baidu.com",
+          "name": "百度云"
         },
         {
           "icon": "",
-          "link": "https://juejin.cn/",
-          "name": "稀土掘金"
+          "link": "https://pan.baidu.com",
+          "name": "百度网盘"
+        },
+        {
+          "icon": "",
+          "link": "https://sso.qiniu.com",
+          "name": "七牛云"
+        },
+        {
+          "icon": "",
+          "link": "101.200.221.236:29149",
+          "name": "宝塔1"
+        },
+        {
+          "icon": "",
+          "link": "12.126.73.204:42078/b3e8570f",
+          "name": "宝塔2"
+        },
+        {
+          "icon": "",
+          "link": "https://gitea.beyondxin.top",
+          "name": "Gitea"
+        },
+        {
+          "icon": "",
+          "link": "http://www.fastlink9.cc",
+          "name": "FASTLINK"
+        },
+        {
+          "icon": "",
+          "link": "https://lf.lanfan.cc/auth/login",
+          "name": "蓝帆云"
         }
       ]
     },
     {
-      "id": "art",
-      "name": "美术资源",
+      "id": "entertainment",
+      "name": "娱乐",
       "collection": [
         {
           "icon": "",
-          "link": "https://itch.io/",
-          "name": "itch.io"
+          "link": "https://www.bilibili.com/",
+          "name": "哔哩哔哩"
         },
         {
           "icon": "",
-          "link": "https://opengameart.org/",
-          "name": "OpenGameArt"
+          "link": "https://www.youtube.com/",
+          "name": "YouTube"
+        },
+        {
+          "name": "阮一峰",
+          "link": "https://github.com/ruanyf/weekly",
+          "icon": "https://avatars.githubusercontent.com/u/905434?v=4"
         },
         {
           "icon": "",
-          "link": "https://www.pinterest.com/",
-          "name": "Pinterest"
+          "name": "CSDN",
+          "link": "https://blog.csdn.net/a15005784320"
         },
         {
           "icon": "",
-          "link": "https://assetstore.unity.com/zh?locale=zh_CN&force=true",
-          "name": "Unity商店"
+          "link": "https://v.qq.com/",
+          "name": "腾讯视频"
         },
         {
           "icon": "",
-          "link": "https://game-icons.net/",
-          "name": "游戏SVG图标"
-        },
-        {
-          "icon": "",
-          "link": "https://www.gamedeveloperstudio.com/",
-          "name": "GameDevStudio"
-        },
-        {
-          "icon": "",
-          "link": "https://quaternius.com/",
-          "name": "三维模型"
-        },
-        {
-          "icon": "",
-          "link": "https://www.kenney.nl/assets",
-          "name": "Kenney"
-        },
-        {
-          "icon": "",
-          "link": "https://learningmusic.ableton.com/index.html",
-          "name": "LearnMusic"
-        },
-        {
-          "icon": "",
-          "link": "https://incompetech.com/wordpress/",
-          "name": "incompetech"
-        },
-        {
-          "icon": "",
-          "link": "https://bz.zzzmh.cn/index",
-          "name": "极简壁纸"
-        },
-        {
-          "icon": "",
-          "link": "https://unsplash.com/",
-          "name": "Unsplash"
-        },
-        {
-          "icon": "",
-          "link": "https://wallhaven.cc/",
-          "name": "wallhaven"
-        },
-        {
-          "icon": "",
-          "link": "https://freephotos.cc/search/nature",
-          "name": "freephotos"
-        },
-        {
-          "icon": "",
-          "link": "https://pixabay.com/zh/",
-          "name": "pixabay"
-        },
-        {
-          "icon": "",
-          "link": "https://yesicon.app/",
-          "name": "yesicon"
-        }
-      ]
-    },
-    {
-      "id": "game",
-      "name": "游戏开发",
-      "collection": [
-        {
-          "icon": "",
-          "link": "https://godotengine.org/",
-          "name": "Godot官网"
-        },
-        {
-          "icon": "",
-          "link": "https://www.gameui.net/",
-          "name": "GameUI.net"
-        },
-        {
-          "icon": "",
-          "link": "https://magic-games.itch.io/crazy-monster-shooter",
-          "name": "Shooter"
-        },
-        {
-          "icon": "",
-          "link": "https://www.gameui.net/",
-          "name": "GameUI.net"
+          "link": "https://store.steampowered.com/",
+          "name": "Steam"
         }
       ]
     },
@@ -252,31 +158,6 @@
           "link": "http://www.google.com/"
         },
         {
-          "icon": "https://github.githubassets.com/assets/apple-touch-icon-92bd46d04241.png",
-          "name": "GitHub",
-          "link": "https://github.com/BeyondXinXin"
-        },
-        {
-          "icon": "",
-          "name": "百度翻译",
-          "link": "https://fanyi.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "文心一言",
-          "link": "https://yiyan.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "ChatGPT",
-          "link": "https://chat.openai.com/"
-        },
-        {
-          "icon": "",
-          "link": "https://www.bilibili.com/",
-          "name": "哔哩哔哩"
-        },
-        {
           "icon": "",
           "link": "https://wx.mail.qq.com/",
           "name": "QQ邮箱"
@@ -290,6 +171,56 @@
           "icon": "https://api.iowen.cn/favicon/www.feishu.cn.png",
           "link": "https://jaql42cvmrt.feishu.cn/wiki/OQPKwQi6cif7Kpk3G0BcRLAnn9g",
           "name": "程序人生"
+        },
+        {
+          "icon": "",
+          "name": "文心一言",
+          "link": "https://yiyan.baidu.com/"
+        },
+        {
+          "icon": "",
+          "name": "通义千问",
+          "link": "https://tongyi.aliyun.com/qianwen"
+        },
+        {
+          "icon": "",
+          "name": "豆包",
+          "link": "https://www.doubao.com/chat/"
+        },
+        {
+          "icon": "",
+          "name": "ChatGPT",
+          "link": "https://chat.openai.com/"
+        },
+        {
+          "icon": "",
+          "name": "Gemini",
+          "link": "https://gemini.google.com/app"
+        },
+        {
+          "icon": "",
+          "link": "https://www.bilibili.com/",
+          "name": "哔哩哔哩"
+        },
+        {
+          "icon": "",
+          "link": "https://www.youtube.com/",
+          "name": "YouTube"
+        },
+        {
+          "icon": "https://github.com/",
+          "name": "GitHub",
+          "link": "https://github.com/BeyondXinXin"
+        },
+        {
+          "icon": "",
+          "name": "CSDN",
+          "link": "https://blog.csdn.net/a15005784320"
+        },
+        {
+          "icon": "",
+          "name": "百度翻译",
+          "link": "https://fanyi.baidu.com/"
         }
       ]
     }
@@ -383,6 +314,25 @@
             }
           ],
           "article": []
+        },
+        {
+          "id": "blog1",
+          "name": "优秀博客",
+          "document": [],
+          "article": [
+            {
+              "name": "游戏开发",
+              "link": "https://www.haroldserrano.com/blog/best-books-to-develop-a-game-engine"
+            },
+            {
+              "name": "影像学",
+              "link": "https://martinopilia.com/"
+            },
+            {
+              "name": "图形学",
+              "link": "https://tavianator.com/index.html"
+            }
+          ]
         }
       ]
     },
@@ -407,6 +357,92 @@
             {
               "link": "https://godotshaders.com/shader/",
               "name": "Godot Shaders"
+            },
+            {
+              "link": "https://godotengine.org/",
+              "name": "Godot官网"
+            },
+            {
+              "link": "https://www.gameui.net/",
+              "name": "GameUI.net"
+            },
+            {
+              "link": "https://magic-games.itch.io/crazy-monster-shooter",
+              "name": "Shooter"
+            },
+            {
+              "link": "https://www.gameui.net/",
+              "name": "GameUI.net"
+            }
+          ]
+        },
+        {
+          "id": "art",
+          "name": "美术资源",
+          "article": [
+            {
+              "link": "https://itch.io/",
+              "name": "itch.io"
+            },
+            {
+              "link": "https://opengameart.org/",
+              "name": "OpenGameArt"
+            },
+            {
+              "link": "https://www.pinterest.com/",
+              "name": "Pinterest"
+            },
+            {
+              "link": "https://assetstore.unity.com/zh?locale=zh_CN&force=true",
+              "name": "Unity商店"
+            },
+            {
+              "link": "https://game-icons.net/",
+              "name": "游戏SVG图标"
+            },
+            {
+              "link": "https://www.gamedeveloperstudio.com/",
+              "name": "GameDevStudio"
+            },
+            {
+              "link": "https://quaternius.com/",
+              "name": "三维模型"
+            },
+            {
+              "link": "https://www.kenney.nl/assets",
+              "name": "Kenney"
+            },
+            {
+              "link": "https://learningmusic.ableton.com/index.html",
+              "name": "LearnMusic"
+            },
+            {
+              "link": "https://incompetech.com/wordpress/",
+              "name": "incompetech"
+            },
+            {
+              "link": "https://bz.zzzmh.cn/index",
+              "name": "极简壁纸"
+            },
+            {
+              "link": "https://unsplash.com/",
+              "name": "Unsplash"
+            },
+            {
+              "link": "https://wallhaven.cc/",
+              "name": "wallhaven"
+            },
+            {
+              "link": "https://freephotos.cc/search/nature",
+              "name": "freephotos"
+            },
+            {
+              "link": "https://pixabay.com/zh/",
+              "name": "pixabay"
+            },
+            {
+              "link": "https://yesicon.app/",
+              "name": "yesicon"
             }
           ]
         }
@@ -415,7 +451,38 @@
     {
       "id": "front",
       "name": "前端",
-      "subclass": []
+      "subclass": [
+        {
+          "id": "learnWeb",
+          "name": "学习网站",
+          "article": [
+            {
+              "name": "ZDZN",
+              "link": "https://www.zdzn.net/"
+            },
+            {
+              "link": "https://www.runoob.com/",
+              "name": "菜鸟教程"
+            },
+            {
+              "link": "https://juejin.cn/",
+              "name": "稀土掘金"
+            },
+            {
+              "link": "https://moon-start.netlify.app/",
+              "name": "Moon"
+            },
+            {
+              "link": "https://0x3.com/",
+              "name": "0x3"
+            },
+            {
+              "link": "https://fayin.love/",
+              "name": "爱发音"
+            }
+          ]
+        }
+      ]
     }
   ],
   "settings": {
