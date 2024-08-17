@@ -6,7 +6,7 @@ _path: /blog/Github封印下的反思
 半个月前，我在淘宝花了25元购买了Github Copilot一个月的服务。然而，7月9号，我的账号被封了，没有任何提示和预警。这个突如其来的变故让我大脑一片空白。回过神来后，我四处查找百度，发现找回的可能性不大。
 
 <figure class="half"  align="center">
-<img src = "https://img.beyondxin.top/202407101708999.png">
+<img src = "https://img.beyondxin.top/2024/202407101708999.png">
 </figure>
 
 **Chapter One 影响** 
@@ -40,7 +40,7 @@ _path: /blog/Github封印下的反思
 
 之前从未接触过网络和运维，只听说搞CDN会被攻击账单巨贵，但像我这种每天几十次的访问没必要搞。目前还是建站小白，不用仓库我还没想到该怎么做图床，只能先这样了。也不知道宝塔这个统计是不是真的，如果每天真有100个用户访问，还是挺满足的。
 
-| ![](Https://img.beyondxin.top/202407102121616.png) | ![](Https://img.beyondxin.top/202407102134579.png) |
+| ![](https://img.beyondxin.top/2024/202407102121616.png) | ![](https://img.beyondxin.top/2024/202407102134579.png) |
 | ----- | -------------------------------------------------- |
 
 * 重新购买Copilot
@@ -58,7 +58,7 @@ _path: /blog/Github封印下的反思
 我有很长一段时间都停滞不前了，多出来的时间也没有更好的生活，身体变得更糟。被封的前一天，正好刷到MoneyXYZ的连续两个视频，正感慨自己的人生呢。再加上这次被封，心里真的是感慨万千啊。
 
 <figure class="half"  align="center">
-<img src = "Https://img.beyondxin.top/202407102200859.png" width=800>
+<img src = "https://img.beyondxin.top/2024/202407102200859.png" width=800>
 </figure>
 
 人生有三种工作：为了生存的工作（ricework）、做自己喜欢的事情（likework）、找到人生意义的事情（lifework）。我现在就是那种为了生存而工作的人，每天忙忙碌碌，感觉自己的生活带宽都快被挤爆了。这份工作虽然能养活自己，但随时可能丢，感觉就像是在绳索上走钢丝，一点也不稳定。通过更卖力的工作已经不能挣到更多钱，当我想工资翻倍的时候，我现在做的所有事情都是错的。
