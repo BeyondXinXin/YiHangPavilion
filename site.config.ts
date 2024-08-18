@@ -12,11 +12,6 @@ export const navLinks = [
     external: false,
   },
   {
-    title: '收藏',
-    path: '/favorites',
-    external: false,
-  },
-  {
     title: '文档',
     path: '/docs',
     external: false,

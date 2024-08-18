@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-c_bg_navigation rounded-lg items-center min-w-[900px] mx-auto fixed z-10 top-12"
+  <div class="flex bg-c_bg_navigation rounded-lg items-center min-w-[700px] mx-auto fixed z-10 top-12"
     style="left: 50%; transform: translate(-50%, -50%);">
 
     <div class="text-2xl pl-8 font-bold">易航阁</div>
