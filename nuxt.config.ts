@@ -54,7 +54,5 @@ export default defineNuxtConfig({
       },
     },
   },
-  nitro: {
-    compatibilityDate: '2024-08-18'
-  }
+  compatibilityDate: '2024-08-18'
 });
