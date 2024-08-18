@@ -29,9 +29,7 @@ export const useDocsStore = defineStore(
     const loaded = ref<boolean>(false);
 
     function initializeDocs() {
-      console.log('useDocsStore initializeBookmarks ...');
       if (!loaded.value) {
-        console.log('useDocsStore loadDocs ...');
         loadDocs();
       }
     }

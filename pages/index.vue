@@ -1,11 +1,14 @@
 <template>
   <div class="w-[1200px]">
     <AggregatedSearch />
-    <div class="flex justify-center pt-10">
-      <div class="grid grid-cols-5 gap-4">
-        <SiteItemCard v-for="link in bookmarkStore.getGeneral" :key="link.link" :link="link" />
+    <client-only>
+      <div class="flex justify-center pt-10">
+        <div class="grid grid-cols-5 gap-4">
+          <SiteItemCard v-for="link in bookmarkStore.data.find((bookmark) => bookmark.id === 'general')?.collection"
+            :key="link.link" :link="link" />
+        </div>
       </div>
-    </div>
+    </client-only>
   </div>
 </template>
 
@@ -15,6 +18,5 @@ import SiteItemCard from '~/components/site-item-card.vue';
 import { useBookmarkStore } from '~/store/bookmarks';
 
 const bookmarkStore = useBookmarkStore();
-bookmarkStore.initializeBookmarks();
 
 </script>
