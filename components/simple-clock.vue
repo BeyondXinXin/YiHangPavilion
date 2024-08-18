@@ -2,7 +2,7 @@
 <template>
     <div text-center mt-10 h-10>
         <div text-5xl h-8 v-if="true">{{ time }}</div>
-        <p text="20px" mt-5>
+        <p text="20px" mt-8>
             <span>{{ date }} </span>
             <span ml-2>{{ week }}</span>
             <span ml-2>{{ lunarDate }}</span>

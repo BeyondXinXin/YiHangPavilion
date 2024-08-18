@@ -1,13 +1,13 @@
 <template>
     <a target="_blank" rel="nofollow external" :href="link.link" class="  
-        w-[200px] h-[67px] flex items-center justify-between px-4 rounded-md border  
+        w-[140px] h-[55px] flex items-center pl-4 pr-2 rounded-md border border-[#80808080] hover:border-[#ffffff]
         hover:scale-[1.05] hover:z-2 transition-transform duration-300  
       ">
-        <img :src="iconUrl" alt="" class="w-8 h-8" decoding="async" loading="lazy" />
-        <span class="text-white">{{ link.name }}</span>
+        <img :src="iconUrl" alt="" class="w-32px h-32px mr-2" decoding="async" loading="lazy" />
+        <span class="text-white text-[14px] truncate whitespace-nowrap">{{ link.name }}</span>
     </a>
-</template>  
-    
+</template>
+
 <script setup>
 import { defineProps, ref, onMounted, watch } from 'vue';
 import { getFaviconUrl } from '~/utils/favicon.ts';

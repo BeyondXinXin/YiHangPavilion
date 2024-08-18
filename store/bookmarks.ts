@@ -25,6 +25,9 @@ export const useBookmarkStore = defineStore(
     // data
     const data = computed((): Bookmarks[] => {
       if (window) {
+        if (customData.value.length === 0) {
+          customData.value = presetBookmarksData.bookmarks
+        }
         return presetBookmarksData.bookmarks
       }
       return []
