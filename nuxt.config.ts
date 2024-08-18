@@ -2,10 +2,10 @@ import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
   modules: [
-    '@unocss/nuxt', 
-    '@vueuse/nuxt', 
-    '@nuxt/content', 
-    '@pinia/nuxt', 
+    '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/content',
+    '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt'],
   app: {
     rootId: 'nuxt-root',
@@ -54,4 +54,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    compatibilityDate: '2024-08-18'
+  }
 });
