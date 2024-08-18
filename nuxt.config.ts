@@ -1,7 +1,12 @@
 import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxt/content', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  modules: [
+    '@unocss/nuxt', 
+    '@vueuse/nuxt', 
+    '@nuxt/content', 
+    '@pinia/nuxt', 
+    '@pinia-plugin-persistedstate/nuxt'],
   app: {
     rootId: 'nuxt-root',
     head: {

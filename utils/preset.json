@@ -163,8 +163,8 @@
           "link": "http://www.google.com/"
         },
         {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://mail.qq.com/&size=16",
-          "link": "https://wx.mail.qq.com/",
+          "icon": "https://favicon.cccyun.cc/https://mail.qq.com/",
+          "link": "https://mail.qq.com/",
           "name": "QQ邮箱"
         },
         {
