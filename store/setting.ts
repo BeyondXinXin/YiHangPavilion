@@ -3,6 +3,7 @@ import { defineStore } from 'pinia';
 export const useSettingStore = defineStore('setting', () => {
     const websitePreference = ref("default")
     const isClient = ref<Boolean>(false)
+
     onMounted(() => {
         if (typeof window !== 'undefined' && navigator.userAgent.indexOf('Chrome') > -1) {
             isClient.value = true;
@@ -23,6 +24,10 @@ export const useSettingStore = defineStore('setting', () => {
 }
 )
 
+export const useSessionStore = defineStore('session', () => {
+    const isSetting = ref(false)
 
+    return { isSetting }
+});
 
 
