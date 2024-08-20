@@ -12,11 +12,6 @@ export const navLinks = [
     external: false,
   },
   {
-    title: '文档',
-    path: '/docs',
-    external: false,
-  },
-  {
     title: '工具',
     path: '/tools',
     external: false,

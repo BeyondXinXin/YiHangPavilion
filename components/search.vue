@@ -17,7 +17,8 @@
 
       <!-- Search engine logo -->
       <div top-0 left-4 w-6 h-6 mt-3 absolute v-on-click-outside="() => selectionVisible = false">
-        <div hover="op-100" h-full w-full flex-center cursor-pointer op="60" transition-300 @click="toggleSelection">
+        <div hover="op-40" select-none h-full w-full flex-center cursor-pointer op="100" transition-300
+          @click="toggleSelection">
           <img :src="_getFavicon(searchList[curSearchIndex])" h-32 w-32>
         </div>
       </div>
@@ -41,7 +42,6 @@
           ref="searchInputRef" v-model="keyword" @keydown.enter="search" @input="handleInput" @focus="handleFocus"
           @keydown="handleKeydown" @keydown.down.exact="keyNext" @keydown.up.exact="keyPrev"
           @keydown.tab.exact="keyTable">
-
       </div>
 
       <!-- Button -->

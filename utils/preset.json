@@ -1,452 +1,504 @@
 {
-  "bookmarks": [
+  "domains": [
     {
-      "id": "ai",
-      "name": "AI",
-      "collection": [
-        {
-          "icon": "",
-          "name": "文心一言",
-          "link": "https://yiyan.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "通义千问",
-          "link": "https://tongyi.aliyun.com/qianwen"
-        },
-        {
-          "icon": "",
-          "name": "豆包",
-          "link": "https://www.doubao.com/chat/"
-        },
-        {
-          "icon": "",
-          "name": "ChatGPT",
-          "link": "https://chat.openai.com/"
-        },
-        {
-          "icon": "",
-          "name": "Gemini",
-          "link": "https://gemini.google.com/app"
-        },
-        {
-          "icon": "",
-          "name": "TTSMaker",
-          "link": "https://ttsmaker.com/zh-cn"
-        },
-        {
-          "icon": "",
-          "name": "DALL·E 3",
-          "link": "https://cn.bing.com/images/create?FORM=GENEXP"
-        },
-        {
-          "icon": "",
-          "name": "百度智能云",
-          "link": "https://console.bce.baidu.com/"
-        },
-        {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bailian.console.aliyun.com",
-          "name": "阿里云百炼",
-          "link": "https://bailian.console.aliyun.com/"
-        },
-        {
-          "icon": "",
-          "name": "字节火山引擎",
-          "link": "https://console.volcengine.com/"
-        }
-      ]
-    },
-    {
-      "id": "serve",
-      "name": "服务器",
-      "collection": [
-        {
-          "icon": "",
-          "link": "https://ecs.console.aliyun.com",
-          "name": "阿里云"
-        },
-        {
-          "icon": "",
-          "link": "https://cloud.baidu.com",
-          "name": "百度云"
-        },
-        {
-          "icon": "",
-          "link": "https://pan.baidu.com",
-          "name": "百度网盘"
-        },
-        {
-          "icon": "",
-          "link": "https://sso.qiniu.com",
-          "name": "七牛云"
-        },
-        {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
-          "link": "https://101.200.221.236:29149",
-          "name": "宝塔1"
-        },
-        {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
-          "link": "https://112.126.73.204:42078/b3e8570f",
-          "name": "宝塔2"
-        },
-        {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://about.gitea.com/",
-          "link": "https://gitea.beyondxin.top",
-          "name": "Gitea"
-        },
-        {
-          "icon": "",
-          "link": "http://www.fastlink9.cc",
-          "name": "FASTLINK"
-        },
-        {
-          "icon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://lf.lanfan.cc/",
-          "link": "https://lf.lanfan.cc/auth/login",
-          "name": "蓝帆云"
-        },
-        {
-          "icon": "",
-          "link": "https://www.google.com/adsense",
-          "name": "Google AdSense"
-        }
-      ]
-    },
-    {
-      "id": "entertainment",
-      "name": "娱乐",
-      "collection": [
-        {
-          "icon": "",
-          "link": "https://www.bilibili.com/",
-          "name": "哔哩哔哩"
-        },
-        {
-          "icon": "",
-          "link": "https://www.youtube.com/",
-          "name": "YouTube"
-        },
-        {
-          "name": "阮一峰",
-          "link": "https://github.com/ruanyf/weekly",
-          "icon": "https://avatars.githubusercontent.com/u/905434?v=4"
-        },
-        {
-          "icon": "",
-          "name": "CSDN",
-          "link": "https://blog.csdn.net/a15005784320"
-        },
-        {
-          "icon": "",
-          "link": "https://v.qq.com/",
-          "name": "腾讯视频"
-        },
-        {
-          "icon": "",
-          "link": "https://store.steampowered.com/",
-          "name": "Steam"
-        }
-      ]
-    },
-    {
-      "id": "general",
+      "id": 1,
       "name": "常用",
-      "collection": [
+      "categoryList": [
         {
-          "icon": "",
-          "name": "百度",
-          "link": "https://www.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "谷歌",
-          "link": "http://www.google.com/"
-        },
-        {
-          "icon": "https://favicon.cccyun.cc/https://mail.qq.com/",
-          "link": "https://mail.qq.com/",
-          "name": "QQ邮箱"
-        },
-        {
-          "icon": "",
-          "link": "https://mail.163.com/",
-          "name": "163邮箱"
-        },
-        {
-          "icon": "https://api.iowen.cn/favicon/www.feishu.cn.png",
-          "link": "https://jaql42cvmrt.feishu.cn/wiki/OQPKwQi6cif7Kpk3G0BcRLAnn9g",
-          "name": "程序人生"
-        },
-        {
-          "icon": "",
-          "name": "文心一言",
-          "link": "https://yiyan.baidu.com/"
-        },
-        {
-          "icon": "",
-          "name": "通义千问",
-          "link": "https://tongyi.aliyun.com/qianwen"
-        },
-        {
-          "icon": "",
-          "name": "豆包",
-          "link": "https://www.doubao.com/chat/"
-        },
-        {
-          "icon": "",
-          "name": "ChatGPT",
-          "link": "https://chat.openai.com/"
-        },
-        {
-          "icon": "",
-          "name": "Gemini",
-          "link": "https://gemini.google.com/app"
-        },
-        {
-          "icon": "",
-          "link": "https://www.bilibili.com/",
-          "name": "哔哩哔哩"
-        },
-        {
-          "icon": "",
-          "link": "https://www.youtube.com/",
-          "name": "YouTube"
-        },
-        {
-          "icon": "https://github.com/favicon.ico",
-          "name": "GitHub",
-          "link": "https://github.com/BeyondXinXin"
-        },
-        {
-          "icon": "",
-          "name": "CSDN",
-          "link": "https://blog.csdn.net/a15005784320"
-        },
-        {
-          "icon": "",
-          "name": "百度翻译",
-          "link": "https://fanyi.baidu.com/"
-        }
-      ]
-    }
-  ],
-  "docs": [
-    {
-      "id": "c++",
-      "name": "C++",
-      "subclass": [
-        {
-          "id": "qt",
-          "name": "Qt",
-          "document": [
+          "id": 0,
+          "name": "搜索",
+          "siteList": [
             {
-              "link": "https://doc.qt.io/",
-              "name": "Qt文档"
+              "id": 1,
+              "favicon": "",
+              "name": "百度",
+              "url": "https://www.baidu.com/"
             },
             {
-              "link": "https://download.qt.io/archive/qt/",
-              "name": "QT下载"
-            }
-          ],
-          "article": [
+              "id": 2,
+              "favicon": "",
+              "name": "谷歌",
+              "url": "http://www.google.com/"
+            },
             {
-              "link": "https://martinopilia.com/posts/2018/09/17/volume-raycasting.html",
-              "name": "GPU在Qt和OpenGL中加速的单程体积光线投射"
+              "id": 3,
+              "favicon": "",
+              "name": "必应",
+              "url": "https://cn.bing.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "百度翻译",
+              "url": "https://fanyi.baidu.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "https://github.com/favicon.ico",
+              "name": "GitHub",
+              "url": "https://github.com/BeyondXinXin"
             }
           ]
         },
         {
-          "id": "vtk",
-          "name": "VTK",
-          "document": [
+          "id": 0,
+          "name": "工作",
+          "siteList": [
             {
-              "link": "https://examples.vtk.org/site/Cxx/",
+              "id": 1,
+              "favicon": "https://api.iowen.cn/favicon/www.feishu.cn.png",
+              "url": "https://jaql42cvmrt.feishu.cn/wiki/OQPKwQi6cif7Kpk3G0BcRLAnn9g",
+              "name": "程序人生"
+            },
+            {
+              "id": 1,
+              "favicon": "https://favicon.cccyun.cc/https://mail.qq.com/",
+              "url": "https://mail.qq.com/",
+              "name": "QQ邮箱"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://mail.163.com/",
+              "name": "163邮箱"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "AI",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "文心一言",
+              "url": "https://yiyan.baidu.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "通义千问",
+              "url": "https://tongyi.aliyun.com/qianwen"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "豆包",
+              "url": "https://www.doubao.com/chat/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "ChatGPT",
+              "url": "https://chat.openai.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "Gemini",
+              "url": "https://gemini.google.com/app"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "TTSMaker",
+              "url": "https://ttsmaker.com/zh-cn"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "娱乐",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://www.bilibili.com/",
+              "name": "哔哩哔哩"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://www.youtube.com/",
+              "name": "YouTube"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://v.qq.com/",
+              "name": "腾讯视频"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://store.steampowered.com/",
+              "name": "Steam"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "服务器",
+      "categoryList": [
+        {
+          "id": 41,
+          "name": "云计算",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://ecs.console.aliyun.com",
+              "name": "阿里云"
+            },
+                        {
+              "id": 1,
+              "favicon": "",
+              "url": "https://cloud.baidu.com",
+              "name": "百度云"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "阿里云百炼",
+              "url": "https://bailian.console.aliyun.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "百度智能云",
+              "url": "https://console.bce.baidu.com/"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "字节火山",
+              "url": "https://console.volcengine.com/"
+            },
+
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://pan.baidu.com",
+              "name": "百度网盘"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://sso.qiniu.com",
+              "name": "七牛云"
+            },
+            {
+              "name": "阮一峰",
+              "url": "https://github.com/ruanyf/weekly",
+              "id": 1,
+              "favicon": "https://avatars.githubusercontent.com/u/905434?v=4"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "name": "CSDN",
+              "url": "https://blog.csdn.net/a15005784320"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://www.google.com/adsense",
+              "name": "Google AdSense"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "部署",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
+              "url": "https://101.200.221.236:29149",
+              "name": "宝塔1"
+            },
+            {
+              "id": 1,
+              "favicon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bt.cn/",
+              "url": "https://112.126.73.204:42078/b3e8570f",
+              "name": "宝塔2"
+            },
+            {
+              "id": 1,
+              "favicon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://about.gitea.com/",
+              "url": "https://gitea.beyondxin.top",
+              "name": "Gitea"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "http://www.fastlink9.cc",
+              "name": "FASTLINK"
+            },
+            {
+              "id": 1,
+              "favicon": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://lf.lanfan.cc/",
+              "url": "https://lf.lanfan.cc/auth/login",
+              "name": "蓝帆云"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "C++",
+      "categoryList": [
+        {
+          "id": 1,
+          "name": "Qt",
+          "siteList": [
+            {
+              "id": 2,
+              "favicon": "",
+              "url": "https://doc.qt.io/",
+              "name": "Qt文档"
+            },
+            {
+              "id": 3,
+              "favicon": "",
+              "url": "https://download.qt.io/archive/qt/",
+              "name": "QT下载"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "name": "VTK",
+          "siteList": [
+            {
+              "id": 5,
+              "favicon": "",
+              "url": "https://examples.vtk.org/site/Cxx/",
               "name": "VTK Examples"
             },
             {
-              "link": "https://gitlab.kitware.com/explore",
+              "id": 6,
+              "favicon": "",
+              "url": "https://gitlab.kitware.com/explore",
               "name": "VTK GitLab"
             },
             {
-              "link": "https://vtk.org/doc/nightly/html/classes.html",
+              "id": 7,
+              "favicon": "",
+              "url": "https://vtk.org/doc/nightly/html/classes.html",
               "name": "VTK Class Index"
             }
-          ],
-          "article": []
+          ]
         },
         {
-          "id": "opengl",
+          "id": 1,
           "name": "OpenGL",
-          "document": [
+          "siteList": [
             {
-              "link": "https://learnopengl-cn.github.io/intro/",
+              "id": 8,
+              "favicon": "",
+              "url": "https://learnopengl-cn.github.io/intro/",
               "name": "Learn OpenGL"
-            }
-          ],
-          "article": [
-            {
-              "link": "https://www.codeproject.com/Articles/352270/Getting-Started-with-Volume-Rendering-using-OpenGL",
-              "name": "使用OpenGL进行体绘制入门"
             },
             {
-              "link": "https://gamemath.com/",
-              "name": "图形与游戏开发3D数学入门"
-            },
-            {
-              "link": "https://ncase.me/sight-and-light/",
+              "id": 11,
+              "favicon": "",
+              "url": "https://ncase.me/sight-and-light/",
               "name": "视线与灯光"
             }
           ]
         },
         {
-          "id": "mitk",
-          "name": "Mitk",
-          "document": [
-            {
-              "link": "https://docs.mitk.org/2016.11/index.html",
-              "name": "Mitk Doc"
-            }
-          ],
-          "article": []
-        },
-        {
-          "id": "rcf",
-          "name": "RCF",
-          "document": [
-            {
-              "link": "https://www.deltavsoft.com/doc/_tutorial.html",
-              "name": "RCF Doc"
-            }
-          ],
-          "article": []
-        },
-        {
-          "id": "blog1",
+          "id": 1,
           "name": "优秀博客",
-          "document": [],
-          "article": [
+          "siteList": [
             {
+              "id": 12,
+              "favicon": "",
+              "url": "https://docs.mitk.org/2016.11/index.html",
+              "name": "Mitk Doc"
+            },
+            {
+              "id": 13,
+              "favicon": "",
+              "url": "https://www.deltavsoft.com/doc/_tutorial.html",
+              "name": "RCF Doc"
+            },
+            {
+              "id": 14,
+              "favicon": "",
               "name": "游戏开发",
-              "link": "https://www.haroldserrano.com/blog/best-books-to-develop-a-game-engine"
+              "url": "https://www.haroldserrano.com/blog/best-books-to-develop-a-game-engine"
             },
             {
+              "id": 15,
+              "favicon": "",
               "name": "影像学",
-              "link": "https://martinopilia.com/"
+              "url": "https://martinopilia.com/"
             },
             {
+              "id": 16,
+              "favicon": "",
               "name": "图形学",
-              "link": "https://tavianator.com/index.html"
+              "url": "https://tavianator.com/index.html"
             }
           ]
         }
       ]
     },
     {
-      "id": "game",
+      "id": 1,
       "name": "独立游戏",
-      "subclass": [
+      "categoryList": [
         {
-          "id": "godot",
+          "id": 17,
           "name": "Godot",
-          "document": [
+          "siteList": [
             {
-              "link": "https://docs.godotengine.org/zh-cn/4.x/",
+              "id": 18,
+              "favicon": "",
+              "url": "https://docs.godotengine.org/zh-cn/4.x/",
               "name": "Godot文档"
-            }
-          ],
-          "article": [
+            },
             {
-              "link": "https://kidscancode.org/godot_recipes/4.x/",
+              "id": 19,
+              "favicon": "",
+              "url": "https://kidscancode.org/godot_recipes/4.x/",
               "name": "Godot Recipes"
             },
             {
-              "link": "https://godotshaders.com/shader/",
+              "id": 20,
+              "favicon": "",
+              "url": "https://godotshaders.com/shader/",
               "name": "Godot Shaders"
             },
             {
-              "link": "https://godotengine.org/",
+              "id": 21,
+              "favicon": "",
+              "url": "https://godotengine.org/",
               "name": "Godot官网"
             },
             {
-              "link": "https://www.gameui.net/",
+              "id": 22,
+              "favicon": "",
+              "url": "https://www.gameui.net/",
               "name": "GameUI.net"
             },
             {
-              "link": "https://magic-games.itch.io/crazy-monster-shooter",
+              "id": 23,
+              "favicon": "",
+              "url": "https://magic-games.itch.io/crazy-monster-shooter",
               "name": "Shooter"
             },
             {
-              "link": "https://www.gameui.net/",
+              "id": 24,
+              "favicon": "",
+              "url": "https://www.gameui.net/",
               "name": "GameUI.net"
             }
           ]
         },
         {
-          "id": "art",
+          "id": 17,
           "name": "美术资源",
-          "article": [
+          "siteList": [
             {
-              "link": "https://itch.io/",
+              "id": 25,
+              "favicon": "",
+              "url": "https://itch.io/",
               "name": "itch.io"
             },
             {
-              "link": "https://opengameart.org/",
-              "name": "OpenGameArt"
+              "id": 26,
+              "favicon": "",
+              "url": "https://opengameart.org/",
+              "name": "Open GameArt"
             },
             {
-              "link": "https://www.pinterest.com/",
+              "id": 27,
+              "favicon": "",
+              "url": "https://www.pinterest.com/",
               "name": "Pinterest"
             },
             {
-              "link": "https://assetstore.unity.com/zh?locale=zh_CN&force=true",
+              "id": 28,
+              "favicon": "",
+              "url": "https://assetstore.unity.com/zh?locale=zh_CN&force=true",
               "name": "Unity商店"
             },
             {
-              "link": "https://game-icons.net/",
+              "id": 29,
+              "favicon": "",
+              "url": "https://game-icons.net/",
               "name": "游戏SVG图标"
             },
             {
-              "link": "https://www.gamedeveloperstudio.com/",
-              "name": "GameDevStudio"
+              "id": 30,
+              "favicon": "",
+              "url": "https://www.gamedeveloperstudio.com/",
+              "name": "Game DevStudio"
             },
             {
-              "link": "https://quaternius.com/",
+              "id": 31,
+              "favicon": "",
+              "url": "https://quaternius.com/",
               "name": "三维模型"
             },
             {
-              "link": "https://www.kenney.nl/assets",
+              "id": 32,
+              "favicon": "",
+              "url": "https://www.kenney.nl/assets",
               "name": "Kenney"
             },
             {
-              "link": "https://learningmusic.ableton.com/index.html",
+              "id": 33,
+              "favicon": "",
+              "url": "https://learningmusic.ableton.com/index.html",
               "name": "LearnMusic"
             },
             {
-              "link": "https://incompetech.com/wordpress/",
+              "id": 34,
+              "favicon": "",
+              "url": "https://incompetech.com/wordpress/",
               "name": "incompetech"
             },
             {
-              "link": "https://bz.zzzmh.cn/index",
+              "id": 35,
+              "favicon": "",
+              "url": "https://bz.zzzmh.cn/index",
               "name": "极简壁纸"
             },
             {
-              "link": "https://unsplash.com/",
+              "id": 36,
+              "favicon": "",
+              "url": "https://unsplash.com/",
               "name": "Unsplash"
             },
             {
-              "link": "https://wallhaven.cc/",
+              "id": 37,
+              "favicon": "",
+              "url": "https://wallhaven.cc/",
               "name": "wallhaven"
             },
             {
-              "link": "https://freephotos.cc/search/nature",
+              "id": 38,
+              "favicon": "",
+              "url": "https://freephotos.cc/search/nature",
               "name": "freephotos"
             },
             {
-              "link": "https://pixabay.com/zh/",
+              "id": 39,
+              "favicon": "",
+              "url": "https://pixabay.com/zh/",
               "name": "pixabay"
             },
             {
-              "link": "https://yesicon.app/",
+              "id": 40,
+              "favicon": "",
+              "url": "https://yesicon.app/",
               "name": "yesicon"
             }
           ]
@@ -454,45 +506,58 @@
       ]
     },
     {
-      "id": "front",
+      "id": 1,
       "name": "前端",
-      "subclass": [
+      "categoryList": [
         {
-          "id": "learnWeb",
+          "id": 41,
           "name": "学习网站",
-          "article": [
+          "siteList": [
             {
+              "id": 42,
+              "favicon": "",
               "name": "ZDZN",
-              "link": "https://www.zdzn.net/"
+              "url": "https://www.zdzn.net/"
             },
             {
-              "link": "https://www.runoob.com/",
+              "id": 43,
+              "favicon": "",
+              "url": "https://www.runoob.com/",
               "name": "菜鸟教程"
             },
             {
-              "link": "https://juejin.cn/",
+              "id": 44,
+              "favicon": "",
+              "url": "https://juejin.cn/",
               "name": "稀土掘金"
             },
             {
-              "link": "https://moon-start.netlify.app/",
+              "id": 45,
+              "favicon": "",
+              "url": "https://moon-start.netlify.app/",
               "name": "Moon"
             },
             {
-              "link": "https://0x3.com/",
+              "id": 46,
+              "favicon": "",
+              "url": "https://0x3.com/",
               "name": "0x3"
             },
             {
-              "link": "https://fayin.love/",
+              "id": 47,
+              "favicon": "",
+              "url": "https://web-abin.github.io/abinWeb/",
+              "name": "前端助手"
+            },
+            {
+              "id": 47,
+              "favicon": "",
+              "url": "https://fayin.love/",
               "name": "爱发音"
             }
           ]
         }
       ]
     }
-  ],
-  "settings": {
-    "theme": "MoonWhite",
-    "search": "Bing",
-    "iconStyle": "Plain"
-  }
+  ]
 }
