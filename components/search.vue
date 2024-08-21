@@ -1,9 +1,7 @@
 <template>
-  <div class="flex flex-col items-center text-lg mb-5">
+  <div class="pt-5 flex flex-col items-center text-lg mb-5">
 
-
-
-    <div class="w-[650px]" relative mx-auto mt-20 h-12>
+    <div class="w-[650px]" relative mx-auto h-12>
 
       <!-- Keyword recommend -->
       <div absolute w-full mt-12 bg-c_bg_navigation py-1 v-show="showKeyDownSel && noticeKeyList.length > 1"
@@ -59,7 +57,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
 import { vOnClickOutside } from '@vueuse/components'
 import { debounce } from '@/utils/common'
 import searchEngine from '@/utils/search-engine'
