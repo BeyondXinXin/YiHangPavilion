@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt'],
+    '@pinia-plugin-persistedstate/nuxt',
+    'nuxtjs-naive-ui',],
   app: {
     rootId: 'nuxt-root',
     head: {

@@ -1,14 +1,10 @@
 import { defineStore } from 'pinia';
 
 export const useSettingStore = defineStore('setting', () => {
+    const isShowNavBar = ref<Boolean>(true)
+    const isShowTime = ref<Boolean>(true)
+    const isShowFooter = ref<Boolean>(true)
     const websitePreference = ref("default")
-    const isClient = ref<Boolean>(false)
-
-    onMounted(() => {
-        if (typeof window !== 'undefined' && navigator.userAgent.indexOf('Chrome') > -1) {
-            isClient.value = true;
-        }
-    });
 
     function custom() {
         websitePreference.value = "custom"
@@ -16,7 +12,7 @@ export const useSettingStore = defineStore('setting', () => {
     function reset() {
         websitePreference.value = "default"
     }
-    return { isClient, websitePreference, custom, reset }
+    return { isShowNavBar, isShowTime, isShowFooter, websitePreference, custom, reset }
 }, {
     persist: {
         storage: persistedState.localStorage,
@@ -26,7 +22,6 @@ export const useSettingStore = defineStore('setting', () => {
 
 export const useSessionStore = defineStore('session', () => {
     const isSetting = ref(false)
-
     return { isSetting }
 });
 

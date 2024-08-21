@@ -4,15 +4,17 @@
         <div class="flex-1"></div>
 
         <!-- Centered Record Link -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 text-sm text-center select-none op-50">
+        <div v-if="settingStore.isShowFooter"
+            class="absolute left-1/2 transform -translate-x-1/2 text-sm text-center select-none op-50">
             <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023033867号</a>
         </div>
 
         <!-- Right Side Icons and Button -->
         <div class="flex flex-row items-center space-x-4 text-3">
-            <a i-simple-icons:bilibili href="https://space.bilibili.com/285016963?spm_id_from=333.1007.0.0"
+            <a v-if="settingStore.isShowFooter" i-simple-icons:bilibili
+                href="https://space.bilibili.com/285016963?spm_id_from=333.1007.0.0" target="_blank"></a>
+            <a v-if="settingStore.isShowFooter" i-simple-icons-github href="https://github.com/BeyondXinXin"
                 target="_blank"></a>
-            <a i-simple-icons-github href="https://github.com/BeyondXinXin" target="_blank"></a>
 
             <button v-if="sessionStore.isSetting" @click="toggleSetting(false)" i-icon-park-outline:home />
             <RouterLink to="/" button v-else @click="toggleSetting(true)" i-icon-park-outline:setting-config />
@@ -25,6 +27,7 @@ import { useSettingStore, useSessionStore } from '~/store/setting'
 import { RouterLink } from 'vue-router'
 
 const sessionStore = useSessionStore()
+const settingStore = useSettingStore()
 
 function toggleSetting(value: boolean) {
     sessionStore.isSetting = value

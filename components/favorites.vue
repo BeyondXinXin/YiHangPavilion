@@ -106,15 +106,6 @@ function handleDragEnd(e: any) {
     const { oldIndex, newIndex } = e
 }
 
-
-function funText1() {
-    settingStore.reset()
-}
-
-function funText2() {
-    settingStore.custom()
-}
-
 </script>
 
 <style scoped>
