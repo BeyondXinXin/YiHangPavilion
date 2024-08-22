@@ -4,7 +4,9 @@ export const useSettingStore = defineStore('setting', () => {
     const isShowNavBar = ref<Boolean>(true)
     const isShowTime = ref<Boolean>(true)
     const isShowFooter = ref<Boolean>(true)
+    const isSynchronization = ref<Boolean>(false)
     const websitePreference = ref("default")
+    const passphrase = ref("")
 
     function custom() {
         websitePreference.value = "custom"
@@ -12,7 +14,7 @@ export const useSettingStore = defineStore('setting', () => {
     function reset() {
         websitePreference.value = "default"
     }
-    return { isShowNavBar, isShowTime, isShowFooter, websitePreference, custom, reset }
+    return { passphrase, isShowNavBar, isShowTime, isShowFooter, isSynchronization, websitePreference, custom, reset }
 }, {
     persist: {
         storage: persistedState.localStorage,

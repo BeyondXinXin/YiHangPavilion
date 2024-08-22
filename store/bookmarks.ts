@@ -1,38 +1,37 @@
 import { defineStore } from 'pinia'
-import { parse, stringify } from 'zipson'
+import { ref, computed } from 'vue'
 import type { Domain } from '@/utils/types'
+import presetBookmarksData from '@/utils/preset.json'
 
-import presetBookmarksData from '@/utils/preset.json';
-
-function loadData(): Domain[] | undefined {
-  if (window) {
+// Helper function to load data
+function loadData(): Domain[] {
+  if (typeof window !== 'undefined') {
     const data = localStorage.getItem('cache')
     return data ? JSON.parse(data) : presetBookmarksData.domains
   }
-  return undefined
+  return presetBookmarksData.domains
 }
 
-export const useBookmarkStore = defineStore(
-  'bookmarks',
-  () => {
+export const useBookmarkStore = defineStore('bookmarks', () => {
+  const customData = ref<Domain[]>(loadData())
 
-    // data
-    const data = computed((): Domain[] => {
-      if (window) {
-        if (customData.value.length === 0) {
-          customData.value = presetBookmarksData.domains
-        }
-        return presetBookmarksData.domains
+  const data = computed((): Domain[] => {
+    if (typeof window !== 'undefined') {
+      if (customData.value.length === 0) {
+        customData.value = presetBookmarksData.domains
       }
-      return []
-    })
-    const customData = ref<Domain[]>(loadData() || [])
+      return customData.value
+    }
+    return []
+  })
 
-    return { data, customData };
+  function restoreData() {
+    customData.value = presetBookmarksData.domains
+  }
+
+  return { data, customData, restoreData }
+}, {
+  persist: {
+    storage: persistedState.localStorage,
   },
-  {
-    persist: {
-      storage: persistedState.localStorage,
-    },
-  },
-);
+});
