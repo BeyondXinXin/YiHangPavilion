@@ -2,13 +2,12 @@ import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
   modules: [
+    'nuxtjs-naive-ui',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    'nuxtjs-naive-ui',
-    // '@nuxtjs/axios',
   ],
   app: {
     rootId: 'nuxt-root',
@@ -42,7 +41,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '@unocss/reset/tailwind.css',
+    '@/assets/styles/tailwind.css',
     '@/assets/styles/global.scss',
     '@/assets/styles/theme.css',
     '@/assets/styles/markdown.scss',
