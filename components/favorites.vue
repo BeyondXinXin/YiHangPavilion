@@ -60,11 +60,11 @@
                 </template>
             </draggable>
 
-            <n-button w-full strong secondary type="primary">
+            <n-button v-if="sessionStore.isSetting" w-full strong secondary type="primary">
                 <NIcon i-mdi:add :size="32" />
             </n-button>
 
-            <n-button w-full h-20 strong mt-4 secondary type="error">
+            <n-button v-if="sessionStore.isSetting" w-full h-20 strong mt-4 secondary type="error">
                 <NIcon i-mdi:delete :size="32" />
             </n-button>
 
