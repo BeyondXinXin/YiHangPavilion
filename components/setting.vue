@@ -12,7 +12,7 @@
 
             <div flex flex-row mt16 p-4>
 
-                <div flex flex-row w-160 bg-c_bg_navigation p-4>
+                <div flex flex-row w-200 bg-c_bg_navigation p-4>
                     <div flex flex-row gap-x-5 w-80>
                         <NIcon size="20">
                             <div i-simple-icons:icloud />

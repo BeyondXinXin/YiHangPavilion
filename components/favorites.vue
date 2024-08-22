@@ -20,7 +20,7 @@
             :component-data="{
                 tag: 'div',
                 type: 'transition-group',
-            }" v-bind="draggableOptions" @start="handleStart" @end="handleEnd">
+            }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
 
             <template #item="{ element: group, index: i }">
                 <div class="flex gap-x-8px my-15px">
@@ -34,7 +34,7 @@
                         class="grid grid-cols-7 gap-2" handle=".site__handle" drag-class="dragging" :component-data="{
                             tag: 'div',
                             type: 'transition-group',
-                        }" v-bind="draggableOptions" @start="handleStart" @end="handleEnd">
+                        }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
                         <template #item="{ element: site, index }: { element: Site, index: number }">
                             <div class="site__handle">
                                 <SiteItemCard :key="site.id" :site="site" />
