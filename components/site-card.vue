@@ -1,5 +1,5 @@
 <template>
-    <a target="_blank" rel="nofollow external" :href="site.url" class=" select-none
+    <a target="_blank" rel="nofollow external" :href="site.url" class="select-none
         w-[140px] h-[55px] flex items-center pl-2 pr-2 rounded-md border border-[#80808080] hover:border-[#ffffff]
         hover:scale-[1.05] hover:z-2 transition-transform duration-300  
       ">
@@ -29,4 +29,3 @@ const iconUrl = computed(() => {
 });
 
 </script>
-
