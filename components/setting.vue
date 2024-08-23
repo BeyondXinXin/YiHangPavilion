@@ -2,7 +2,7 @@
 
     <client-only>
         <n-config-provider :theme="theme">
-            <div mt16 mb4 text-18px> 设置 </div>
+            <div my10 mb0 text-18px/> 
 
             <div grid grid-cols-2 md="grid-cols-3" lg="grid-cols-6" justify-between gap-12>
                 <Selection v-model="isShowNavBar" :options="visibilityOptions" title="显示导航栏" />
@@ -10,7 +10,7 @@
                 <Selection v-model="isShowFooter" :options="visibilityOptions" title="显示页脚" />
             </div>
 
-            <div flex flex-row mt16 p-4>
+            <div flex flex-row mt8>
 
                 <div flex flex-row w-200 bg-c_bg_navigation p-4>
                     <div flex flex-row gap-x-5 w-80>
