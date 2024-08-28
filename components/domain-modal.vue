@@ -1,5 +1,6 @@
 <template>
     <NModal v-model:show="modalStore.modalVisible" preset="dialog" title="Dialog" :show-icon="false" :closable="false">
+
         <template #header>
             <div>{{ modalStore.title }}</div>
         </template>
@@ -8,8 +9,13 @@
             <n-input v-model:value="modalStore.inputValues.name"
                 :status="modalStore.inputValues.name ? undefined : inputStatus" :placeholder="'名称'"
                 @keydown.enter="handleCommit" />
+
             <n-input v-if="modalStore.target === 'site'" v-model:value="modalStore.inputValues.url"
                 :status="modalStore.inputValues.url.trim() ? undefined : inputStatus" :placeholder="'链接'"
+                @keydown.enter="handleCommit" />
+
+            <n-input v-if="modalStore.target === 'site'" v-model:value="modalStore.inputValues.favicon"
+                :status="modalStore.inputValues.name ? undefined : inputStatus" :placeholder="'图标链接(选填)'"
                 @keydown.enter="handleCommit" />
 
         </div>
@@ -29,10 +35,6 @@
         </template>
 
     </NModal>
-
-
-
-
 
 </template>
 

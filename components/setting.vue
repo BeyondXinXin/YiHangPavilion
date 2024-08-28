@@ -23,9 +23,9 @@
                         <NInput v-if="!settingStore.isSynchronization" mr-6 v-model:value="passphrase"
                             :disabled="settingStore.isSynchronization as boolean" type="text" placeholder="输入口令" />
                     </div>
-                    <n-button mr-6 v-if="!settingStore.isSynchronization" @click="pushBtnClick()">保存数据</n-button>
-                    <n-button mr-6 v-if="!settingStore.isSynchronization" @click="retrieveBtnClick()">读取数据</n-button>
+                    <n-button mr-6 v-if="!settingStore.isSynchronization" @click="pushBtnClick()">上传数据</n-button>
                     <n-button mr-6 v-if="settingStore.isSynchronization" @click="cancelSyncBtnClick()">取消同步</n-button>
+                    <n-button mr-6 @click="retrieveBtnClick()">下载数据</n-button>
                 </div>
 
                 <div flex flex-row w-120 p-4 ml-10>
@@ -89,14 +89,17 @@ function pushBtnClick() {
 
 }
 function retrieveBtnClick() {
-    if (!settingStore.isSynchronization && passphrase.value === "") {
-        return
+    console.log(settingStore.isSynchronization)
+    if (settingStore.isSynchronization) {
+        onRetrieveData()
+    } else {
+        if (passphrase.value !== "") {
+            settingStore.isSynchronization = true
+            const fullHash = CryptoJS.SHA256(passphrase.value).toString(CryptoJS.enc.Base64)
+            settingStore.passphrase = fullHash.substring(0, 12)
+            onRetrieveData()
+        }
     }
-    settingStore.isSynchronization = true
-    const fullHash = CryptoJS.SHA256(passphrase.value).toString(CryptoJS.enc.Base64)
-    settingStore.passphrase = fullHash.substring(0, 12)
-    onRetrieveData()
-
 }
 function cancelSyncBtnClick() {
     settingStore.isSynchronization = false

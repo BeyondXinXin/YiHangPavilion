@@ -32,6 +32,7 @@
   "devDependencies": {
     "@nuxt/content": "^2.13.2",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.16.0",
     "@unocss/nuxt": "^0.57.7",
     "@unocss/preset-icons": "^0.58.9",
