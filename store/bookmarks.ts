@@ -1,56 +1,76 @@
-import { defineStore } from 'pinia';
-import { parse, stringify } from 'zipson';
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
+import type { Domain } from '@/utils/types'
+import presetBookmarksData from '@/utils/preset.json'
 
-import presetBookmarksData from '@/utils/preset.json';
+// Helper function to load data
+function loadData(): Domain[] {
+  if (typeof window !== 'undefined') {
+    const data = localStorage.getItem('cache')
+    return data ? JSON.parse(data) : presetBookmarksData.domains
+  }
+  return presetBookmarksData.domains
+}
 
-export const useBookmarkStore = defineStore(
-  'bookmarks',
-  () => {
-    const count = ref(10);
-    const bookmarks = ref<{ id: string; collection: { icon: string; name: string; link: string }[] }[]>([]);
-    const loaded = ref<boolean>(false);
+export const useBookmarkStore = defineStore('bookmarks', () => {
+  const customData = ref<Domain[]>(loadData())
+  
+  const domainIndex = ref(0)
+  const categoryIndex = ref(0)
+  const siteIndex = ref(0)
 
-    const getGeneral = computed(() => bookmarks.value.find((bookmark) => bookmark.id === 'general')?.collection);
-
-    function increment() {
-      count.value++;
-    }
-
-    // 从JSON加载书签数据（可选）
-    function initializeBookmarks() {
-      console.log("useBookmarkStore initializeBookmarks ...")
-      if (!loaded.value) {
-        console.log("useBookmarkStore loadBookmarks ...")
-        loadBookmarks();
+  const data = computed((): Domain[] => {
+    if (typeof window !== 'undefined') {
+      if (customData.value.length === 0) {
+        customData.value = presetBookmarksData.domains
       }
+      return customData.value
     }
+    return []
+  })
 
-    function loadBookmarks() {
-      bookmarks.value = presetBookmarksData.bookmarks;
-      loaded.value = true;
-    }
+  function addSite(site: Site) {
+    customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList.push(site)
+  }
+  function addCategory(group: Category) {
+    customData.value[domainIndex.value].categoryList.push(group)
+  }
+  function addDomain(cate: Domain) {
+    customData.value.push(cate)
+  }
 
-    // 添加书签到指定的分类（可选）
-    function addBookmark(categoryId: string, bookmark: { icon: string; name: string; link: string }) {
-      const category = bookmarks.value.find((cat) => cat.id === categoryId);
-      if (category) {
-        category.collection.push(bookmark);
-      }
-    }
+  function updateSite(site: Partial<Site>) {
+    Object.assign(customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList[siteIndex.value], site)
+  }
+  function updateCategory(group: Partial<Category>) {
+    Object.assign(customData.value[domainIndex.value].categoryList[categoryIndex.value], group)
+  }
+  function updateDomain(cate: Partial<Domain>) {
+    Object.assign(customData.value[domainIndex.value], cate)
+  }
 
-    // 移除指定分类下的书签（可选）
-    function removeBookmark(categoryId: string, bookmarkIndex: number) {
-      const category = bookmarks.value.find((cat) => cat.id === categoryId);
-      if (category) {
-        category.collection.splice(bookmarkIndex, 1);
-      }
-    }
+  function deleteSite() {
+    customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList.splice(siteIndex.value, 1)
+  }
+  function deleteCategory() {
+    customData.value[domainIndex.value].categoryList.splice(categoryIndex.value, 1)
+  }
+  function deleteDomain() {
+    customData.value.splice(domainIndex.value, 1)
+  }
 
-    return { count, bookmarks, loaded, getGeneral, initializeBookmarks, loadBookmarks, increment };
+  function restoreData() {
+    customData.value = presetBookmarksData.domains
+  }
+
+  return {
+    data, customData, domainIndex, categoryIndex, siteIndex, restoreData,
+    addSite, addCategory, addDomain,
+    updateSite, updateCategory, updateDomain,
+    deleteSite, deleteCategory, deleteDomain,
+  }
+}, {
+  persist: {
+    storage: persistedState.localStorage,
   },
-  {
-    persist: {
-      storage: persistedState.localStorage,
-    },
-  },
-);
+});

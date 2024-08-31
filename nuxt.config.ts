@@ -2,14 +2,13 @@ import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
   modules: [
+    'nuxtjs-naive-ui',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    "@nuxt/image"
   ],
-
   app: {
     rootId: 'nuxt-root',
     head: {
@@ -31,7 +30,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   content: {
     highlight: {
       theme: {
@@ -42,18 +40,15 @@ export default defineNuxtConfig({
       preload: ['c', 'cpp', 'java'],
     },
   },
-
   css: [
-    '@unocss/reset/tailwind.css',
+    '@/assets/styles/tailwind.css',
     '@/assets/styles/global.scss',
     '@/assets/styles/theme.css',
     '@/assets/styles/markdown.scss',
   ],
-
   devtools: {
     enabled: false,
   },
-
   vite: {
     server: {
       hmr: {
@@ -61,6 +56,5 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  compatibilityDate: '2024-08-17',
+  compatibilityDate: '2024-08-18'
 });
