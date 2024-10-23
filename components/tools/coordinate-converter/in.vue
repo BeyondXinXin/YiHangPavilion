@@ -1,139 +1,139 @@
 <template>
   <div class="mx-aut">
-    <div class="pb-2 flex flex-row">
-      <span class="flex text-xl font-bold pr-5">Input</span>
-      <label><input type="radio" id="iformatrad" name="iformat" :value="false" v-model="isDeg"
-          @change="handleInput(-1)" />弧度</label>
-      <label><input type="radio" id="iformatdeg" name="iformat" :value="true" v-model="isDeg"
-          @change="handleInput(-1)" />角度</label>
-    </div>
+    <span class="flex text-xl font-bold pr-5">Input</span>
+    <NRadioGroup v-model:value="isDeg" class="py-3">
+      <NRadio :value="true">角度</NRadio>
+      <NRadio :value="false">弧度</NRadio>
+    </NRadioGroup>
 
     <InputSection title="旋转矩阵" :rows="matrix" @numberChange="handleInput" :mode="0" />
-    <InputSection title="四元数" :inputs="['q0', 'q1', 'q2', 'q3']" @numberChange="handleInput" :mode="1" />
-    <InputSection title="轴角" :inputs="['a0', 'a1', 'a2', 'a3']" @numberChange="handleInput" :mode="2" />
-    <InputSection title="旋转向量" :inputs="['r0', 'r1', 'r2']" @numberChange="handleInput" :mode="3" />
-    <InputSection title="欧拉角" :inputs="['e0', 'e1', 'e2']" @numberChange="handleInput" :mode="4" />
-
+    <InputSection title="四元数" @numberChange="handleInput" :mode="1" />
+    <InputSection title="轴角" @numberChange="handleInput" :mode="2" />
+    <InputSection title="旋转向量" @numberChange="handleInput" :mode="3" />
+    <InputSection title="欧拉角" @numberChange="handleInput" :mode="4" />
   </div>
 </template>
 
-<script>
-import * as THREE from "three";
-import InputSection from "./input-selection.vue";
+<script setup lang="ts">
+import { ref, reactive, watch } from 'vue';
+import * as THREE from 'three';
+import InputSection from './input-selection.vue';
+import { NRadioGroup, NRadio } from 'naive-ui';
 
-export default {
-  components: {
-    InputSection,
-  },
-  data() {
-    return {
-      isDeg: false,
-      inputNumber: 0,
-      localInputNumber: [0, 0, 0, 0],
+const isDeg = ref(false);
+const inputNumber = ref(0);
+const localInputNumber = reactive([0, 0, 0, 0]);
 
-      matrix: [
-        [1, 0, 0],
-        [0, 1, 0],
-        [0, 0, 1]
-      ],
-    };
-  },
-  methods: {
-    handleInput(data) {
-      if (data.mode !== -1) {
-        this.inputMode = data.mode
-      }
-      var q = new THREE.Quaternion();
-      switch (this.inputMode) {
-        case 0:
-          var m = new THREE.Matrix4();
-          m.set(
-            data.value[0][0], data.value[0][1], data.value[0][2], 0,
-            data.value[1][0], data.value[1][1], data.value[1][2], 0,
-            data.value[2][0], data.value[2][1], data.value[2][2], 0,
-            0, 0, 0, 1
-          );
-          q.setFromRotationMatrix(m);
-          break;
-        case 1:
-          q = new THREE.Quaternion(data.value[0], data.value[1], data.value[2], data.value[3]);
-          break;
-        case 2:
-          q = new THREE.Quaternion();
-          var axis = new THREE.Vector3(data.value[0], data.value[1], data.value[2]);
-          axis.normalize();
-          q.setFromAxisAngle(axis, this.formatAngle(data.value[3]));
-          break;
-        case 3:
-          var axis = new THREE.Vector3(document.getElementById("r0").value,
-            document.getElementById("r1").value,
-            document.getElementById("r2").value);
-          var angle;
-          angle = this.formatAngle(axis.length());
-          axis.normalize();
-          q.setFromAxisAngle(axis, angle);
-          break;
-        case 4:
-          var e = new THREE.Euler(
-            this.formatAngle(data.value[0]),
-            this.formatAngle(data.value[1]),
-            this.formatAngle(data.value[2]));
-          q.setFromEuler(e);
-          break;
-        default:
-          return;
-      }
+const matrix = reactive([
+  [1, 0, 0],
+  [0, 1, 0],
+  [0, 0, 1]
+]);
 
-      q.normalize();
-      this.localInputNumber[0] = q.x;
-      this.localInputNumber[1] = q.y;
-      this.localInputNumber[2] = q.z;
-      this.localInputNumber[3] = q.w;
-      this.$emit("numberChange", this.localInputNumber);
-    },
-    toReal(x) {
-      if (!isNaN(parseFloat(x)) && isFinite(parseFloat(x))) {
-        return parseFloat(parseFloat(x).toFixed(7));
+const inputMode = ref(-1);
+
+
+function handleInput(data: { mode: number; value: number[] | number[][] }) {
+  if (data.mode !== -1) {
+    inputMode.value = data.mode;
+  }
+
+  let q = new THREE.Quaternion();
+
+  switch (inputMode.value) {
+    case 0:
+      if (Array.isArray(data.value) && Array.isArray(data.value[0])) {
+        const m = new THREE.Matrix4();
+        m.set(
+          data.value[0][0], data.value[0][1], data.value[0][2], 0,
+          data.value[1][0], data.value[1][1], data.value[1][2], 0,
+          data.value[2][0], data.value[2][1], data.value[2][2], 0,
+          0, 0, 0, 1
+        );
+        q.setFromRotationMatrix(m);
       } else {
-        return x;
+        console.error("Invalid data structure for rotation matrix");
+        return;
       }
-    },
-    formatAngle(x) {
-      if (this.isDeg) {
-        return x * Math.PI / 180;
+      break;
+    case 1:
+      if (Array.isArray(data.value) && data.value.length >= 4) {
+        q = new THREE.Quaternion(data.value[0], data.value[1], data.value[2], data.value[3]);
       } else {
-        return x;
+        console.error("Invalid data structure for quaternion");
+        return;
       }
-    },
-  },
-};
+      break;
+    case 2:
+      if (Array.isArray(data.value) && data.value.length >= 4) {
+        q = new THREE.Quaternion();
+        const axis = new THREE.Vector3(data.value[0], data.value[1], data.value[2]);
+        axis.normalize();
+        q.setFromAxisAngle(axis, formatAngle(data.value[3]));
+      } else {
+        console.error("Invalid data structure for axis-angle");
+        return;
+      }
+      break;
+    case 3:
+      const r0 = document.getElementById("r0") as HTMLInputElement;
+      const r1 = document.getElementById("r1") as HTMLInputElement;
+      const r2 = document.getElementById("r2") as HTMLInputElement;
+      if (r0 && r1 && r2) {
+        const axisVec = new THREE.Vector3(
+          parseFloat(r0.value),
+          parseFloat(r1.value),
+          parseFloat(r2.value)
+        );
+        const angle = formatAngle(axisVec.length());
+        axisVec.normalize();
+        q.setFromAxisAngle(axisVec, angle);
+      } else {
+        console.error("Invalid HTML elements for rotation vector");
+        return;
+      }
+      break;
+    case 4:
+      if (Array.isArray(data.value) && data.value.length >= 3) {
+        const e = new THREE.Euler(
+          formatAngle(data.value[0] as number),
+          formatAngle(data.value[1] as number),
+          formatAngle(data.value[2] as number)
+        );
+        q.setFromEuler(e);
+      } else {
+        console.error("Invalid data structure for Euler angles");
+        return;
+      }
+      break;
+    default:
+      return;
+  }
+
+  q.normalize();
+  localInputNumber[0] = q.x;
+  localInputNumber[1] = q.y;
+  localInputNumber[2] = q.z;
+  localInputNumber[3] = q.w;
+
+  emit('numberChange', [...localInputNumber]);
+}
+
+// Emit events
+const emit = defineEmits<{
+  (e: 'numberChange', value: number[]): void;
+}>();
+
+function toReal(x: number | string) {
+  const num = parseFloat(x as string);
+  if (!isNaN(num) && isFinite(num)) {
+    return parseFloat(num.toFixed(7));
+  } else {
+    return x;
+  }
+}
+
+function formatAngle(x: number) {
+  return isDeg.value ? x * Math.PI / 180 : x;
+}
 </script>
-
-
-
-
-<!-- 
-
-<div class="bg-gray-300 border border-white p-2 mb-5">
-  <div class="pb-2">
-    欧拉角
-    <select class="w-[110px] h-8 p-1 mx-2 bg-white border border-gray-400 rounded" id="euler"
-      onchange="handleInput(4)">
-      <option value="XYZ">XYZ</option>
-      <option value="XZY">XZY</option>
-      <option value="YXZ">YXZ</option>
-      <option value="YZX">YZX</option>
-      <option value="ZXY">ZXY</option>
-      <option value="ZYX" selected>ZYX</option>
-    </select>
-  </div>
-  <span class=""> x</span>
-  <input class="w-[110px] h-8 p-1 mx-2 bg-white border border-gray-400 rounded" type="number" pattern="\d+(\.\d*)?"
-    id="e0" value="0" @input="handleInput(4)" />
-  <span class=""> y</span>
-  <input class="w-[110px] h-8 p-1 mx-2 bg-white border border-gray-400 rounded" type="number" pattern="\d+(\.\d*)?"
-    id="e1" value="0" @input="handleInput(4)" />
-  <span class=""> z</span>
-  <input class="w-[110px] h-8 p-1 mx-2 bg-white border border-gray-400 rounded" type="number" pattern="\d+(\.\d*)?"
-    id="e2" value="0" @input="handleInput(4)" />
-</div> -->
