@@ -1,35 +1,32 @@
 <template>
-  <div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto">
-
-    <div class="flex-1">
-      <In @numberChange="handleNumberChange" />
+  <NConfigProvider :theme="darkTheme">
+    <div class="flex flex-col gap-12 lg:flex-row max-w-screen-xl mx-auto">
+      <In class="flex-1" @numberChange="handleNumberChange" />
+      <Out class="flex-1" ref="outRef" />
     </div>
-
-    <div class="flex-1 lg:ml-10">
-      <Out ref="outRef" />
-    </div>
-
-  </div>
+  </NConfigProvider>
 </template>
 
 
-<script>
-import In from "./coordinate-converter/in.vue";
-import Out from "./coordinate-converter/out.vue";
 
-export default {
-  components: {
-    In,
-    Out,
-  },
-  data() {
-    return {
-    };
-  },
-  methods: {
-    handleNumberChange(newNumber) {
-      this.$refs.outRef.handleInput(newNumber)
-    },
-  },
-};
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { darkTheme, NConfigProvider } from 'naive-ui';
+
+import In from './coordinate-converter/in.vue';
+import Out from './coordinate-converter/out.vue';
+
+const outRef = ref(null);
+
+function handleNumberChange(newNumber) {
+  if (outRef.value) {
+    outRef.value.handleInput(newNumber);
+  }
+}
+
+defineExpose({
+  outRef,
+});
+
 </script>

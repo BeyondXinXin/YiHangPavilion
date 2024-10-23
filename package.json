@@ -34,6 +34,7 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.16.0",
+    "@types/three": "^0.169.0",
     "@unocss/nuxt": "^0.57.7",
     "@unocss/preset-icons": "^0.58.9",
     "@vueuse/core": "^10.11.1",

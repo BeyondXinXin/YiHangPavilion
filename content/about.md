@@ -1,13 +1,9 @@
-# 易航阁
 
-> 一个自己用的工作台。  
+> 这是一个个人定制的工作台。
 
-每个人都有自己的习惯，一直找不到合适的主页。  
-动手做一个，正好学习前端。  
-  
+简洁、高效，完全为自己量身打造。
+
 网站开源 [YiHangPavilion](https://github.com/BeyondXinXin/YiHangPavilion)  
-
-
 
 ---
 
