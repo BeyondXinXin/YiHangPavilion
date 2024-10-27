@@ -1,10 +1,10 @@
 <template>
-  <NConfigProvider :theme="darkTheme">
+  <!-- <NConfigProvider :theme="darkTheme">
     <div class="flex flex-col gap-12 lg:flex-row max-w-screen-xl mx-auto">
       <In class="flex-1" @numberChange="handleNumberChange" />
       <Out class="flex-1" ref="outRef" />
     </div>
-  </NConfigProvider>
+  </NConfigProvider> -->
 </template>
 
 
