@@ -115,6 +115,11 @@
               "favicon": "https://www.travellings.cn/assets/travelling-dark.png",
               "url": "https://www.travellings.cn/go.html",
               "name": "开往"
+            }, {
+              "id": 1,
+              "favicon": "",
+              "url": "https://foreverblog.cn/go.html",
+              "name": "虫洞"
             }
           ]
         }
