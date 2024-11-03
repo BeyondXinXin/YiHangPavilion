@@ -1,7 +1,7 @@
 
 # 易航阁
 
-> 这是一个个人定制的工作台,简洁、高效，完全为自己量身打造
+> 将有限的时间和精力用在真正重要的事情上，才是真正的自由！
 
 网站开源 [YiHangPavilion](https://github.com/BeyondXinXin/YiHangPavilion)
 
