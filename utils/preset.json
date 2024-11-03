@@ -105,6 +105,18 @@
               "name": "腾讯视频"
             }
           ]
+        },
+        {
+          "id": 41,
+          "name": "友情链接",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "https://www.travellings.cn/assets/travelling.png",
+              "url": "https://www.travellings.cn/go.html",
+              "name": "开往"
+            }
+          ]
         }
       ]
     },
