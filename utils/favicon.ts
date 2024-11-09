@@ -1,4 +1,4 @@
-const FAVICON_API = 'https://api.iowen.cn/favicon/';
+const FAVICON_API = 'https://www.favicon.vip/get.php?url=';
 
 const siteToUrl: Map<string, string> = new Map();
 
@@ -17,5 +17,5 @@ export function getFaviconUrl(url: string) {
   if (paramsUrl == null) return '';
   const optUrl = siteToUrl.get(paramsUrl);
   if (optUrl) return optUrl;
-  return `${FAVICON_API + paramsUrl}.png`;
+  return `${FAVICON_API + paramsUrl}`;
 }
