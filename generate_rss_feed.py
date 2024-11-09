@@ -80,15 +80,15 @@ def generate_rss_feed():
     """
     # 创建根元素，添加命名空间
     rss = Element("rss", version="2.0", attrib={
-        "xmlns:content": "http://purl.org/rss/1.0/modules/content/"
     })
-    channel = SubElement(rss, "channel")
 
-    follow_challenge = SubElement(channel, "follow_challenge")
-    feedId = SubElement(follow_challenge, "feedId")
-    feedId.text = "77622496639241216"
-    userId = SubElement(follow_challenge, "userId")
-    userId.text = "77153246427582464"
+    # follow_challenge = SubElement(rss, "follow_challenge")
+    # feedId = SubElement(follow_challenge, "feedId")
+    # feedId.text = "77622496639241216"
+    # userId = SubElement(follow_challenge, "userId")
+    # userId.text = "77153246427582464"
+
+    channel = SubElement(rss, "channel")
 
     # 设置频道信息
     title = SubElement(channel, "title")
@@ -151,9 +151,9 @@ def generate_rss_feed():
         item_description = SubElement(item, "description")
         item_description.text = metadata.get("description", "")
 
-        # 将 Markdown 内容转换为 HTML 并插入 content:encoded 标签中
-        content_encoded = SubElement(item, "content:encoded")
-        content_encoded.text = convert_md_to_html(metadata.get("content", ""))
+        # # 将 Markdown 内容转换为 HTML 并插入 content:encoded 标签中
+        # content_encoded = SubElement(item, "content:encoded")
+        # content_encoded.text = convert_md_to_html(metadata.get("content", ""))
 
     # 保存 XML 到文件
     tree = ElementTree(rss)
