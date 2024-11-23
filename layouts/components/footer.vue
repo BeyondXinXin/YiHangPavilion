@@ -16,21 +16,27 @@
             <a v-if="settingStore.isShowFooter" i-simple-icons-github href="https://github.com/BeyondXinXin"
                 target="_blank"></a>
 
-            <button v-if="sessionStore.isSetting" @click="toggleSetting(false)" i-icon-park-outline:home />
-            <RouterLink to="/" button v-else @click="toggleSetting(true)" i-icon-park-outline:setting-config />
+            <button v-if="isNavigationPage && sessionStore.isSetting" @click="toggleSetting(false)"
+                i-icon-park-outline:home />
+            <RouterLink v-if="isNavigationPage && !sessionStore.isSetting" to="/navigation" button
+                @click="toggleSetting(true)" i-icon-park-outline:setting-config />
         </div>
     </footer>
 </template>
 
 <script setup lang="ts">
 import { useSettingStore, useSessionStore } from '~/store/setting'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const sessionStore = useSessionStore()
 const settingStore = useSettingStore()
+const route = useRoute()
 
 function toggleSetting(value: boolean) {
     sessionStore.isSetting = value
 }
+
+// Determine if the current route is "/navigation"
+const isNavigationPage = computed(() => route.path === '/navigation')
 
 </script>

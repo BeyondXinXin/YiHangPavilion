@@ -7,28 +7,20 @@ export const siteConfig = {
 
 export const navLinks = [
   {
-    title: '首页',
+    title: '关于',
     path: '/',
     external: false,
-  },
-  {
-    title: '工具',
-    path: '/tools',
-    external: false,
-  },
-  {
+  }, {
     title: '博客',
     path: '/blog',
     external: false,
-  },
-  {
+  }, {
+    title: '导航',
+    path: '/navigation ',
+    external: false,
+  }, {
     title: '笔记',
     path: 'https://blog.beyondxin.top/',
     external: true,
-  },
-  {
-    title: '关于',
-    path: '/about',
-    external: false,
   },
 ];
