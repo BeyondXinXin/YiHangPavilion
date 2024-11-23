@@ -42,42 +42,6 @@
         },
         {
           "id": 41,
-          "name": "AI",
-          "siteList": [
-            {
-              "id": 1729748294990,
-              "name": "Kimi",
-              "url": "https://kimi.moonshot.cn/",
-              "favicon": ""
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "name": "通义千问",
-              "url": "https://tongyi.aliyun.com/qianwen"
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "name": "豆包",
-              "url": "https://www.doubao.com/chat/"
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "name": "文心一言",
-              "url": "https://yiyan.baidu.com/"
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "name": "ChatGPT",
-              "url": "https://chat.openai.com/"
-            }
-          ]
-        },
-        {
-          "id": 41,
           "name": "娱乐",
           "siteList": [
             {
@@ -127,7 +91,8 @@
               "favicon": "https://www.travellings.cn/assets/travelling-dark.png",
               "url": "https://www.travellings.cn/go.html",
               "name": "开往"
-            }, {
+            },
+            {
               "id": 1,
               "favicon": "",
               "url": "https://foreverblog.cn/go.html",
