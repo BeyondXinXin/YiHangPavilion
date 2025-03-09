@@ -2,10 +2,10 @@
   <div w-full p-5 flex flex-col min-h-screen>
 
 
-    <NavBar v-if="!sessionStore.isSetting && settingStore.isShowNavBar" />
+    <NavBar v-if="!sessionStore.isSetting" />
 
     <main flex-1 mx-auto>
-      <div v-if="!sessionStore.isSetting && settingStore.isShowNavBar" mt-20></div>
+      <div v-if="!sessionStore.isSetting" mt-20></div>
       <slot />
     </main>
 
