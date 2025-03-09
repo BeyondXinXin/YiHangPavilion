@@ -1,9 +1,6 @@
 import { defineStore } from 'pinia';
 
 export const useSettingStore = defineStore('setting', () => {
-    const isShowNavBar = ref<Boolean>(true)
-    const isShowTime = ref<Boolean>(true)
-    const isShowFooter = ref<Boolean>(true)
     const isSynchronization = ref<Boolean>(false)
     const websitePreference = ref("default")
     const passphrase = ref("")
@@ -14,7 +11,7 @@ export const useSettingStore = defineStore('setting', () => {
     function reset() {
         websitePreference.value = "default"
     }
-    return { passphrase, isShowNavBar, isShowTime, isShowFooter, isSynchronization, websitePreference, custom, reset }
+    return { passphrase, isSynchronization, websitePreference, custom, reset }
 }, {
     persist: {
         storage: persistedState.localStorage,

@@ -1,6 +1,6 @@
 <template>
   <div class="w-[1200px]">
-    <MainClock v-if="!sessionStore.isSetting && settingStore.isShowTime" />
+    <MainClock v-if="!sessionStore.isSetting" />
     <AggregatedSearch v-if="!sessionStore.isSetting" />
     <DomainContainer />
     <Setting v-if="sessionStore.isSetting" />
