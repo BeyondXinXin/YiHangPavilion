@@ -20,7 +20,7 @@ export const navLinks = [
     external: false,
   }, {
     title: '笔记',
-    path: 'https://blog.beyondxin.top/',
+    path: 'https://notes.beyondxin.top/',
     external: true,
   },
 ];
