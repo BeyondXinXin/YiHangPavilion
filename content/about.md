@@ -3,7 +3,7 @@
 
 <div style="margin-bottom: 40px;">
   👉 
-  <a href="https://blog.beyondxin.top/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/AI.xyz.html" 
+  <a href="https://notes.beyondxin.top/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/AI.xyz.html" 
      style="margin-right: 10px;" 
      target="_blank" 
      rel="noopener noreferrer">
