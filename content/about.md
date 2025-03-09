@@ -27,11 +27,6 @@
      rel="noopener noreferrer">
     CSDN
   </a>  
-  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=779354187" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    QQ
-  </a>  
 </div>
 
 > 欢迎关注公众号【三十儿艺】，这是一个属于普通人的小天地，记录创作的过程、成长的感悟和生活的点滴。  这里没有高深的理论，只有从代码到生活的真实分享。
