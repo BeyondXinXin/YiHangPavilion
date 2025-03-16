@@ -148,7 +148,7 @@
             },
             {
               "id": 1,
-              "favicon": "https://api.beyondxin.top/ico/gitea.svg",
+              "favicon": "https://api.beyondxin.top/static/icons/gitea.svg",
               "url": "https://gitea.beyondxin.top",
               "name": "Gitea"
             },

@@ -8,7 +8,7 @@ export async function pushDataToServer() {
     const settingStore = useSettingStore();
 
     try {
-        const response = await axios.post('https://api.beyondxin.top/api/yiHangService/store', bookmarkStore.customData, {
+        const response = await axios.post('https://api.beyondxin.top/api/yihang/data', bookmarkStore.customData, {
             params: {
                 passphrase: settingStore.passphrase,
             },
@@ -30,7 +30,7 @@ export async function retrieveDataFromServer() {
     const settingStore = useSettingStore();
 
     try {
-        const response = await axios.get('https://api.beyondxin.top/api/yiHangService/retrieve', {
+        const response = await axios.get('https://api.beyondxin.top/api/yihang/data', {
             params: {
                 passphrase: settingStore.passphrase,
             },
