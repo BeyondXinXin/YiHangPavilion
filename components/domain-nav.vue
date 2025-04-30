@@ -77,12 +77,19 @@ function useDrag() {
     }
 }
 
-
 function handleCateClick(dragIndex: number) {
-    if (sessionStore.isSetting && bookmarkStore.domainIndex === dragIndex)
+    if (sessionStore.isSetting && bookmarkStore.domainIndex === dragIndex) {
         modalStore.showModal('update', 'domain')
-    else
-        bookmarkStore.domainIndex = dragIndex
+    } else {
+        const oldIndex = bookmarkStore.domainIndex
+        bookmarkStore.setDomainIndex(dragIndex)
+        if (oldIndex !== dragIndex) {
+            const refreshEvent = new CustomEvent('domain-changed', {
+                detail: { oldIndex, newIndex: dragIndex }
+            })
+            window.dispatchEvent(refreshEvent)
+        }
+    }
 }
 
 function handleDragEnd(e: any) {

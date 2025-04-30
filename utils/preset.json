@@ -2,7 +2,61 @@
   "domains": [
     {
       "id": 1,
-      "name": "常用",
+      "name": "Beyond欣",
+      "categoryList": [
+        {
+          "id": 0,
+          "name": "Social Links",
+          "siteList": [
+            {
+              "id": 1,
+              "favicon": "https://github.com/favicon.ico",
+              "name": "GitHub",
+              "url": "https://github.com/BeyondXinXin"
+            },
+            {
+              "id": 1,
+              "favicon": "",
+              "url": "https://space.bilibili.com/285016963",
+              "name": "哔哩哔哩"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "Internal Navs",
+          "siteList": [
+            {
+              "id": 1744954415397,
+              "name": "Blog",
+              "url": "https://beyondxin.top/blog",
+              "favicon": "https://api.beyondxin.top/static/icons/logo.ico"
+            },
+            {
+              "id": 1744954471428,
+              "name": "Notes",
+              "url": "https://notes.beyondxin.top",
+              "favicon": "https://api.beyondxin.top/static/icons/logo.ico"
+            },
+            {
+              "id": 1744956692116,
+              "name": "Books",
+              "url": "https://books.beyondxin.top/",
+              "favicon": "https://api.beyondxin.top/static/icons/logo.ico"
+            },
+            {
+              "id": 1744954312135,
+              "name": "NixVis",
+              "url": "https://nixvis.beyondxin.top/",
+              "favicon": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "模板",
       "categoryList": [
         {
           "id": 0,
@@ -10,7 +64,7 @@
           "siteList": [
             {
               "id": 1,
-              "favicon": "",
+              "favicon": "https://www.baidu.com/favicon.ico",
               "name": "百度",
               "url": "https://www.baidu.com/"
             },
@@ -31,84 +85,36 @@
               "favicon": "",
               "name": "百度翻译",
               "url": "https://fanyi.baidu.com/"
-            },
-            {
-              "id": 1,
-              "favicon": "https://github.com/favicon.ico",
-              "name": "GitHub",
-              "url": "https://github.com/BeyondXinXin"
             }
           ]
         },
         {
           "id": 41,
-          "name": "娱乐",
+          "name": "AI",
           "siteList": [
             {
               "id": 1,
-              "favicon": "",
-              "url": "https://www.bilibili.com/",
-              "name": "哔哩哔哩"
+              "favicon": "https://api.beyondxin.top/static/icons/deepseek.png",
+              "name": "DeepSeek",
+              "url": "https://www.deepseek.com/"
             },
             {
               "id": 1,
-              "favicon": "",
-              "url": "https://www.youtube.com/",
-              "name": "YouTube"
+              "favicon": "https://api.beyondxin.top/static/icons/ChatGpt.png",
+              "name": "ChatGPT",
+              "url": "https://chat.openai.com/"
             },
             {
-              "id": 1,
-              "favicon": "",
-              "url": "https://store.steampowered.com/",
-              "name": "Steam"
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "url": "https://v.qq.com/",
-              "name": "腾讯视频"
-            }
-          ]
-        },
-        {
-          "id": 41,
-          "name": "博客",
-          "siteList": [
-            {
-              "id": 1728187529268,
-              "name": "阮一峰",
-              "url": "https://github.com/ruanyf/weekly",
-              "favicon": "https://avatars.githubusercontent.com/u/905434?v=4"
-            },
-            {
-              "id": 1728187542396,
-              "name": "CSDN",
-              "url": "https://blog.csdn.net/a15005784320",
+              "id": 1724641364441,
+              "name": "ChatOpens",
+              "url": "https://www.chatopens.net",
               "favicon": ""
-            },
-            {
-              "id": 1,
-              "favicon": "https://www.travellings.cn/assets/travelling-dark.png",
-              "url": "https://www.travellings.cn/go.html",
-              "name": "开往"
-            },
-            {
-              "id": 1,
-              "favicon": "",
-              "url": "https://foreverblog.cn/go.html",
-              "name": "虫洞"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "name": "服务器",
-      "categoryList": [
+        },
         {
           "id": 41,
-          "name": "云计算",
+          "name": "服务器",
           "siteList": [
             {
               "id": 1728186579470,

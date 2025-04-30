@@ -1,54 +1,56 @@
 <template>
     <client-only>
-
-        <draggable class="m-y3 pt-0 flex flex-col items-center justify-center"
-            :list="selectedData[bookmarkStore.domainIndex].categoryList" item-key="id" handle=".group__handle"
-            drag-class="dragging" :component-data="{
-                tag: 'div',
-                type: 'transition-group',
-            }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
-
-            <template #item="{ element: group, index: i }">
-                <div class="flex gap-x-0 py-15px w-1200px">
-
-                    <div class="w-[140px] h-[55px] " :class="{
-                        'mr2 bg-gray-800 border border-[#80808080] border-dashed rounded-md cursor-pointer': sessionStore.isSetting,
-                    }" @click="handleCategoryClick(i)">
-                        <div h-55px text-18px select-none flex items-center justify-center class="group__handle">
-                            {{ group.name }}
-                        </div>
-                    </div>
+        <div :key="'category-list-' + bookmarkStore.domainIndex + '-' + forceRerender">
 
 
-                    <draggable :list="selectedData[bookmarkStore.domainIndex].categoryList[i].siteList" item-key="id"
-                        group="site" class="grid grid-cols-7 gap-2" handle=".site__handle" drag-class="dragging"
-                        :component-data="{
-                            tag: 'div',
-                            type: 'transition-group',
-                        }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
-                        <template #item="{ element: site, index }: { element: Site, index: number }">
-                            <div class="site__handle">
-                                <SiteItemCard @click="(e) => handleSiteClick(i, index, e)" :class="{
-                                    'border-gray-800 border-dashed ': sessionStore.isSetting,
-                                }" :key="site.id" :site="site" />
+            <draggable class="m-y3 pt-0 flex flex-col items-center justify-center"
+                :list="selectedData[bookmarkStore.domainIndex].categoryList" item-key="id" handle=".group__handle"
+                drag-class="dragging" :component-data="{
+                    tag: 'div',
+                    type: 'transition-group',
+                }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
+
+                <template #item="{ element: group, index: i }">
+                    <div class="flex gap-x-0 py-15px w-1200px">
+
+                        <div class="w-[140px] h-[55px] " :class="{
+                            'mr2 bg-gray-800 border border-[#80808080] border-dashed rounded-md cursor-pointer': sessionStore.isSetting,
+                        }" @click="handleCategoryClick(i)">
+                            <div h-55px text-18px select-none flex items-center justify-center class="group__handle">
+                                {{ group.name }}
                             </div>
-                        </template>
-                    </draggable>
+                        </div>
 
-                    <NButton v-if="sessionStore.isSetting" @click="modalStore.showModal('add', 'site')" h-32px w-32px
-                        my-2 strong circle tertiary type="primary">
-                        <NIcon i-mdi:add :size="48" />
-                    </NButton>
 
-                </div>
-            </template>
-        </draggable>
+                        <draggable :list="selectedData[bookmarkStore.domainIndex].categoryList[i].siteList"
+                            item-key="id" group="site" class="grid grid-cols-7 gap-2" handle=".site__handle"
+                            drag-class="dragging" :component-data="{
+                                tag: 'div',
+                                type: 'transition-group',
+                            }" v-bind="draggableOptions" @start="handleStart" @end="handleDragEnd">
+                            <template #item="{ element: site, index }: { element: Site, index: number }">
+                                <div class="site__handle">
+                                    <SiteItemCard @click="(e) => handleSiteClick(i, index, e)" :class="{
+                                        'border-gray-800 border-dashed ': sessionStore.isSetting,
+                                    }" :key="site.id" :site="site" />
+                                </div>
+                            </template>
+                        </draggable>
 
-        <n-button v-if="sessionStore.isSetting" @click="modalStore.showModal('add', 'category')" w-full strong secondary
-            type="primary">
-            <NIcon i-mdi:add :size="32" />
-        </n-button>
+                        <NButton v-if="sessionStore.isSetting" @click="modalStore.showModal('add', 'site')" h-32px
+                            w-32px my-2 strong circle tertiary type="primary">
+                            <NIcon i-mdi:add :size="48" />
+                        </NButton>
 
+                    </div>
+                </template>
+            </draggable>
+
+            <n-button v-if="sessionStore.isSetting" @click="modalStore.showModal('add', 'category')" w-full strong
+                secondary type="primary">
+                <NIcon i-mdi:add :size="32" />
+            </n-button>
+        </div>
     </client-only>
 </template>
 
@@ -67,6 +69,7 @@ const settingStore = useSettingStore()
 const sessionStore = useSessionStore()
 
 const theme = ref(darkTheme)
+const forceRerender = ref(0)
 
 const selectedData = computed(() => {
     if (settingStore.websitePreference === 'default') {
@@ -77,6 +80,20 @@ const selectedData = computed(() => {
 });
 
 const { draggableOptions, handleStart, handleEnd } = useDrag()
+
+
+onMounted(() => {
+    window.addEventListener('domain-changed', handleDomainChange)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('domain-changed', handleDomainChange)
+})
+
+function handleDomainChange(event) {
+    forceRerender.value++
+}
+
 
 function useDrag() {
     const draggableOptions = computed(() => ({
