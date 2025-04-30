@@ -6,7 +6,7 @@ import markdown
 
 # 固定的配置参数
 MD_DIRECTORY = "content/blog"  # Markdown 文件所在的目录
-SITE_BASE_URL = "https://www.beyondxin.top"  # 站点 URL
+SITE_BASE_URL = "https://navigation.beyondxin.top"  # 站点 URL
 OUTPUT_RSS_FILE = "public/rss_feed.xml"  # 输出的 RSS 文件名称
 
 
