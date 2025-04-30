@@ -12,7 +12,7 @@
         <div class="flex flex-row items-center space-x-4 text-3">
             <button v-if="isNavigationPage && sessionStore.isSetting" @click="toggleSetting(false)"
                 i-icon-park-outline:home />
-            <RouterLink v-if="isNavigationPage && !sessionStore.isSetting" to="/navigation" button
+            <RouterLink v-if="isNavigationPage && !sessionStore.isSetting" to="/" button
                 @click="toggleSetting(true)" i-icon-park-outline:setting-config />
         </div>
     </footer>
@@ -30,7 +30,6 @@ function toggleSetting(value: boolean) {
     sessionStore.isSetting = value
 }
 
-// Determine if the current route is "/navigation"
-const isNavigationPage = computed(() => route.path === '/navigation')
+const isNavigationPage = computed(() => route.path === '/')
 
 </script>

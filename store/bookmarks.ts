@@ -14,7 +14,7 @@ function loadData(): Domain[] {
 
 export const useBookmarkStore = defineStore('bookmarks', () => {
   const customData = ref<Domain[]>(loadData())
-  
+
   const domainIndex = ref(0)
   const categoryIndex = ref(0)
   const siteIndex = ref(0)
@@ -47,6 +47,9 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
   }
   function updateDomain(cate: Partial<Domain>) {
     Object.assign(customData.value[domainIndex.value], cate)
+    // 更新后重置子级索引
+    categoryIndex.value = -1
+    siteIndex.value = -1
   }
 
   function deleteSite() {
@@ -63,12 +66,21 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
     customData.value = presetBookmarksData.domains
   }
 
+  function setDomainIndex(index: number) {
+    domainIndex.value = index
+    // 切换域时重置子级索引
+    categoryIndex.value = -1
+    siteIndex.value = -1
+  }
+
   return {
     data, customData, domainIndex, categoryIndex, siteIndex, restoreData,
     addSite, addCategory, addDomain,
     updateSite, updateCategory, updateDomain,
     deleteSite, deleteCategory, deleteDomain,
+    setDomainIndex,
   }
+
 }, {
   persist: {
     storage: persistedState.localStorage,
