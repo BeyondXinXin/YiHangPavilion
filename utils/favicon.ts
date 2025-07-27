@@ -1,4 +1,4 @@
-const FAVICON_API = 'https://www.favicon.vip/get.php?url=';
+const FAVICON_API = 'https://0x3.com/icon?host=';
 
 const siteToUrl: Map<string, string> = new Map();
 
