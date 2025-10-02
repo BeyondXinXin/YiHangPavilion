@@ -1,4 +1,4 @@
-const FAVICON_API = 'https://0x3.com/icon?host=';
+const FAVICON_API = 'https://toolb.cn/favicon/';
 
 const siteToUrl: Map<string, string> = new Map();
 
