@@ -1,6 +1,8 @@
 .nuxt
 .output
 node_modules
-pnpm-lock.yaml
 yarn.lock
-
+node-compile-cache
+tsx-*
+nuxt
+nuxt-app@
