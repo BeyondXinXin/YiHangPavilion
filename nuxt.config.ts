@@ -1,17 +1,24 @@
-import { siteConfig } from './site.config';
+﻿import { siteConfig } from './site.config';
 
 export default defineNuxtConfig({
+  ssr: false,
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
   modules: [
-    'nuxtjs-naive-ui',
     '@unocss/nuxt',
-    '@vueuse/nuxt',
-    '@nuxt/content',
     '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt'
   ],
+  build: {
+    transpile: ['naive-ui', 'vueuc'],
+  },
   app: {
     rootId: 'nuxt-root',
     head: {
+      title: siteConfig.title,
       meta: [
         { name: 'description', content: siteConfig.description },
         { name: 'author', content: siteConfig.author },
@@ -30,16 +37,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  content: {
-    highlight: {
-      theme: {
-        default: 'vitesse-light',
-        dark: 'vitesse-dark',
-        sepia: 'monokai',
-      },
-      preload: ['c', 'cpp', 'java'],
-    },
-  },
   css: [
     '@/assets/styles/tailwind.css',
     '@/assets/styles/global.scss',
@@ -50,6 +47,12 @@ export default defineNuxtConfig({
     enabled: false,
   },
   vite: {
+    optimizeDeps: {
+      include: ['naive-ui', 'vueuc'],
+    },
+    ssr: {
+      noExternal: ['naive-ui', 'vueuc'],
+    },
     server: {
       hmr: {
         overlay: false,

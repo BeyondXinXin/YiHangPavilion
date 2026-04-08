@@ -1,13 +1,7 @@
-{
-  // "extends": "./.nuxt/tsconfig.json",
+﻿{
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "three": [
-        "node_modules/three"
-      ]
-    }
+    "skipLibCheck": true
   },
   "include": [
     "**/*.ts",
@@ -17,6 +11,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    ".output"
   ]
 }

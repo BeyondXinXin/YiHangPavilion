@@ -1,111 +1,96 @@
-<template>
+﻿<template>
+  <NConfigProvider :theme="darkTheme">
+    <div my10 mb0 text-18px />
 
-    <client-only>
-        <n-config-provider :theme="theme">
-            <div my10 mb0 text-18px/> 
+    <div flex flex-row mt8>
+      <div flex flex-row w-200 bg-c_bg_navigation p-4>
+        <div flex flex-row gap-x-5 w-80>
+          <NIcon size="20">
+            <div i-simple-icons:icloud />
+          </NIcon>
+          <div text-18px>{{ settingStore.isSynchronization ? '云端同步已开启' : '匿名同步至云端' }}</div>
+        </div>
 
-            <div flex flex-row mt8>
+        <div flex w-140>
+          <NInput
+            v-if="!settingStore.isSynchronization"
+            mr-6
+            v-model:value="passphrase"
+            :disabled="settingStore.isSynchronization"
+            type="text"
+            placeholder="输入口令"
+          />
+        </div>
 
-                <div flex flex-row w-200 bg-c_bg_navigation p-4>
-                    <div flex flex-row gap-x-5 w-80>
-                        <NIcon size="20">
-                            <div i-simple-icons:icloud />
-                        </NIcon>
-                        <div text-18px>{{ settingStore.isSynchronization ? '云端同步已开启' : '匿名同步至云端' }}</div>
-                    </div>
-                    <div flex w-140>
-                        <NInput v-if="!settingStore.isSynchronization" mr-6 v-model:value="passphrase"
-                            :disabled="settingStore.isSynchronization as boolean" type="text" placeholder="输入口令" />
-                    </div>
-                    <n-button mr-6 v-if="!settingStore.isSynchronization" @click="pushBtnClick()">上传数据</n-button>
-                    <n-button mr-6 v-if="settingStore.isSynchronization" @click="cancelSyncBtnClick()">取消同步</n-button>
-                    <n-button mr-6 @click="retrieveBtnClick()">下载数据</n-button>
-                </div>
+        <n-button v-if="!settingStore.isSynchronization" mr-6 @click="pushBtnClick">上传数据</n-button>
+        <n-button v-if="settingStore.isSynchronization" mr-6 @click="cancelSyncBtnClick">取消同步</n-button>
+        <n-button mr-6 @click="retrieveBtnClick">下载数据</n-button>
+      </div>
 
-                <div flex flex-row w-120 p-4 ml-10>
-                    <n-button mr-6 @click="restoreBtnClick()" type="tertiary">恢复初始设置</n-button>
-                    <n-button mr-6 @click="saveBtnClick()">保存</n-button>
-                </div>
-
-            </div>
-
-        </n-config-provider>
-    </client-only>
-
-
-
+      <div flex flex-row w-120 p-4 ml-10>
+        <n-button mr-6 type="tertiary" @click="restoreBtnClick">恢复初始设置</n-button>
+        <n-button mr-6 @click="saveBtnClick">保存</n-button>
+      </div>
+    </div>
+  </NConfigProvider>
 </template>
 
 <script lang="ts" setup>
-
 import { ref } from 'vue'
-import Selection from '~/components/selection.vue'
-import { darkTheme, NConfigProvider, NInput, NButton, NIcon } from 'naive-ui'
-import { useSettingStore, useSessionStore } from '~/store/setting'
-import CryptoJS from 'crypto-js';
+import CryptoJS from 'crypto-js'
+import { darkTheme, NButton, NConfigProvider, NIcon, NInput } from 'naive-ui'
 import { useBookmarkStore } from '~/store/bookmarks'
+import { useSessionStore, useSettingStore } from '~/store/setting'
 import { pushDataToServer, retrieveDataFromServer } from '@/utils/api'
 
 const bookmarkStore = useBookmarkStore()
 const settingStore = useSettingStore()
 const sessionStore = useSessionStore()
+const passphrase = ref('')
 
-const theme = ref(darkTheme)
-const passphrase = ref("")
-
-// 定义可选项 "显示" 和 "隐藏"
-const visibilityOptions = [
-    { label: '显示', value: 1 },
-    { label: '隐藏', value: 0 },
-];
+function getPassphraseHash() {
+  return CryptoJS.SHA256(passphrase.value).toString(CryptoJS.enc.Base64).substring(0, 12)
+}
 
 function pushBtnClick() {
-    if (!settingStore.isSynchronization && passphrase.value === "") {
-        return
-    }
-    settingStore.isSynchronization = true
-    const fullHash = CryptoJS.SHA256(passphrase.value).toString(CryptoJS.enc.Base64)
-    settingStore.passphrase = fullHash.substring(0, 12)
-    onPushData()
+  if (!settingStore.isSynchronization && passphrase.value === '') {
+    return
+  }
 
+  settingStore.isSynchronization = true
+  settingStore.passphrase = getPassphraseHash()
+  void pushDataToServer()
 }
+
 function retrieveBtnClick() {
-    console.log(settingStore.isSynchronization)
-    if (settingStore.isSynchronization) {
-        onRetrieveData()
-    } else {
-        if (passphrase.value !== "") {
-            settingStore.isSynchronization = true
-            const fullHash = CryptoJS.SHA256(passphrase.value).toString(CryptoJS.enc.Base64)
-            settingStore.passphrase = fullHash.substring(0, 12)
-            onRetrieveData()
-        }
-    }
+  if (settingStore.isSynchronization) {
+    void retrieveDataFromServer()
+    return
+  }
+
+  if (passphrase.value === '') {
+    return
+  }
+
+  settingStore.isSynchronization = true
+  settingStore.passphrase = getPassphraseHash()
+  void retrieveDataFromServer()
 }
+
 function cancelSyncBtnClick() {
-    settingStore.isSynchronization = false
-    settingStore.passphrase = ""
+  settingStore.isSynchronization = false
+  settingStore.passphrase = ''
 }
 
 function restoreBtnClick() {
-    bookmarkStore.restoreData()
+  bookmarkStore.restoreData()
 }
 
 function saveBtnClick() {
-    if (settingStore.isSynchronization) {
-        onPushData()
-    }
-    sessionStore.isSetting = false
-}
+  if (settingStore.isSynchronization) {
+    void pushDataToServer()
+  }
 
-async function onPushData() {
-    await pushDataToServer();
+  sessionStore.isSetting = false
 }
-
-async function onRetrieveData() {
-    await retrieveDataFromServer();
-}
-
 </script>
-
-
