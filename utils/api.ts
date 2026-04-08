@@ -1,49 +1,58 @@
+﻿import { useBookmarkStore } from '~/store/bookmarks'
 import { useSettingStore } from '~/store/setting'
-import { useBookmarkStore } from '~/store/bookmarks'
-import axios from 'axios';
+import type { Domain } from '~/utils/types'
 
-// 推送数据到服务端
-export async function pushDataToServer() {
-    const bookmarkStore = useBookmarkStore();
-    const settingStore = useSettingStore();
+const API_URL = 'https://api.beyondxin.top/api/yihang/data'
 
-    try {
-        const response = await axios.post('https://api.beyondxin.top/api/yihang/data', bookmarkStore.customData, {
-            params: {
-                passphrase: settingStore.passphrase,
-            },
-        });
-
-        if (response.status === 200) {
-            console.log('Data stored successfully');
-        } else {
-            console.error('Failed to store data:', response.data);
-        }
-    } catch (error) {
-        console.error('Error pushing data to server:', error);
-    }
+function createApiUrl(passphrase: string) {
+  const url = new URL(API_URL)
+  url.searchParams.set('passphrase', passphrase)
+  return url
 }
 
-// 从服务端获取数据
-export async function retrieveDataFromServer() {
-    const bookmarkStore = useBookmarkStore();
-    const settingStore = useSettingStore();
+async function parseError(response: Response) {
+  try {
+    return await response.text()
+  } catch {
+    return response.statusText
+  }
+}
 
-    try {
-        const response = await axios.get('https://api.beyondxin.top/api/yihang/data', {
-            params: {
-                passphrase: settingStore.passphrase,
-            },
-        });
+export async function pushDataToServer() {
+  const bookmarkStore = useBookmarkStore()
+  const settingStore = useSettingStore()
 
-        if (response.status === 200) {
-            // 将获取的数据存入 Pinia store
-            bookmarkStore.customData = response.data;
-            console.log('Data retrieved successfully');
-        } else {
-            console.error('Failed to retrieve data:', response.data);
-        }
-    } catch (error) {
-        console.error('Error retrieving data from server:', error);
+  try {
+    const response = await fetch(createApiUrl(settingStore.passphrase), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(bookmarkStore.customData),
+    })
+
+    if (!response.ok) {
+      throw new Error(await parseError(response))
     }
+  } catch (error) {
+    console.error('Error pushing data to server:', error)
+  }
+}
+
+export async function retrieveDataFromServer() {
+  const bookmarkStore = useBookmarkStore()
+  const settingStore = useSettingStore()
+
+  try {
+    const response = await fetch(createApiUrl(settingStore.passphrase))
+
+    if (!response.ok) {
+      throw new Error(await parseError(response))
+    }
+
+    const data = await response.json() as Domain[]
+    bookmarkStore.customData = data
+  } catch (error) {
+    console.error('Error retrieving data from server:', error)
+  }
 }

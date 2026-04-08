@@ -1,40 +1,93 @@
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-import type { Domain } from '@/utils/types'
+﻿import { defineStore } from 'pinia'
+import { computed, ref, watch } from 'vue'
+import type { Category, Domain, Site } from '@/utils/types'
 import presetBookmarksData from '@/utils/preset.json'
 
-// Helper function to load data
-function loadData(): Domain[] {
-  if (typeof window !== 'undefined') {
-    const data = localStorage.getItem('cache')
-    return data ? JSON.parse(data) : presetBookmarksData.domains
+const BOOKMARK_STORAGE_KEY = 'bookmarks'
+
+function getDefaultDomains(): Domain[] {
+  return JSON.parse(JSON.stringify(presetBookmarksData.domains)) as Domain[]
+}
+
+type BookmarkState = {
+  customData: Domain[]
+  domainIndex: number
+  categoryIndex: number
+  siteIndex: number
+}
+
+function loadBookmarkState(): BookmarkState {
+  const fallbackState: BookmarkState = {
+    customData: getDefaultDomains(),
+    domainIndex: 0,
+    categoryIndex: 0,
+    siteIndex: 0,
   }
-  return presetBookmarksData.domains
+
+  if (!import.meta.client) {
+    return fallbackState
+  }
+
+  try {
+    const storedValue = localStorage.getItem(BOOKMARK_STORAGE_KEY)
+    if (!storedValue) {
+      return fallbackState
+    }
+
+    const parsed = JSON.parse(storedValue) as Partial<BookmarkState>
+    return {
+      customData: Array.isArray(parsed.customData) && parsed.customData.length > 0
+        ? parsed.customData
+        : fallbackState.customData,
+      domainIndex: typeof parsed.domainIndex === 'number' ? parsed.domainIndex : 0,
+      categoryIndex: typeof parsed.categoryIndex === 'number' ? parsed.categoryIndex : 0,
+      siteIndex: typeof parsed.siteIndex === 'number' ? parsed.siteIndex : 0,
+    }
+  } catch {
+    return fallbackState
+  }
+}
+
+function persistBookmarkState(state: BookmarkState) {
+  if (!import.meta.client) {
+    return
+  }
+
+  localStorage.setItem(BOOKMARK_STORAGE_KEY, JSON.stringify(state))
 }
 
 export const useBookmarkStore = defineStore('bookmarks', () => {
-  const customData = ref<Domain[]>(loadData())
+  const initialState = loadBookmarkState()
 
-  const domainIndex = ref(0)
-  const categoryIndex = ref(0)
-  const siteIndex = ref(0)
+  const customData = ref<Domain[]>(initialState.customData)
+  const domainIndex = ref(initialState.domainIndex)
+  const categoryIndex = ref(initialState.categoryIndex)
+  const siteIndex = ref(initialState.siteIndex)
 
   const data = computed((): Domain[] => {
-    if (typeof window !== 'undefined') {
-      if (customData.value.length === 0) {
-        customData.value = presetBookmarksData.domains
-      }
-      return customData.value
+    if (customData.value.length === 0) {
+      customData.value = getDefaultDomains()
     }
-    return []
+    return customData.value
   })
+
+  watch([customData, domainIndex, categoryIndex, siteIndex], () => {
+    persistBookmarkState({
+      customData: customData.value,
+      domainIndex: domainIndex.value,
+      categoryIndex: categoryIndex.value,
+      siteIndex: siteIndex.value,
+    })
+  }, { deep: true, flush: 'post' })
 
   function addSite(site: Site) {
     customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList.push(site)
   }
+
   function addCategory(group: Category) {
     customData.value[domainIndex.value].categoryList.push(group)
   }
+
   function addDomain(cate: Domain) {
     customData.value.push(cate)
   }
@@ -42,12 +95,13 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
   function updateSite(site: Partial<Site>) {
     Object.assign(customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList[siteIndex.value], site)
   }
+
   function updateCategory(group: Partial<Category>) {
     Object.assign(customData.value[domainIndex.value].categoryList[categoryIndex.value], group)
   }
+
   function updateDomain(cate: Partial<Domain>) {
     Object.assign(customData.value[domainIndex.value], cate)
-    // 更新后重置子级索引
     categoryIndex.value = -1
     siteIndex.value = -1
   }
@@ -55,34 +109,41 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
   function deleteSite() {
     customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList.splice(siteIndex.value, 1)
   }
+
   function deleteCategory() {
     customData.value[domainIndex.value].categoryList.splice(categoryIndex.value, 1)
   }
+
   function deleteDomain() {
     customData.value.splice(domainIndex.value, 1)
   }
 
   function restoreData() {
-    customData.value = presetBookmarksData.domains
+    customData.value = getDefaultDomains()
   }
 
   function setDomainIndex(index: number) {
     domainIndex.value = index
-    // 切换域时重置子级索引
     categoryIndex.value = -1
     siteIndex.value = -1
   }
 
   return {
-    data, customData, domainIndex, categoryIndex, siteIndex, restoreData,
-    addSite, addCategory, addDomain,
-    updateSite, updateCategory, updateDomain,
-    deleteSite, deleteCategory, deleteDomain,
+    data,
+    customData,
+    domainIndex,
+    categoryIndex,
+    siteIndex,
+    restoreData,
+    addSite,
+    addCategory,
+    addDomain,
+    updateSite,
+    updateCategory,
+    updateDomain,
+    deleteSite,
+    deleteCategory,
+    deleteDomain,
     setDomainIndex,
   }
-
-}, {
-  persist: {
-    storage: persistedState.localStorage,
-  },
-});
+})

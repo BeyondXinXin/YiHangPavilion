@@ -1,5 +1,6 @@
 #!/bin/sh
 git pull
 pnpm install
-pnpm build
+pnpm generate
+echo "Static assets generated in .output/public"
 bt default
