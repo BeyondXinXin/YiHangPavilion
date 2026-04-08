@@ -6,3 +6,4 @@ node-compile-cache
 tsx-*
 nuxt
 nuxt-app@
+/dist
