@@ -37,6 +37,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: ".output/public/*"
-          target: "/home/www/html/navigation.beyondxin.top"
+          target: "/home/www/html/navigation.beyondxin.com"
           strip_components: 2
           overwrite: true
