@@ -94,7 +94,9 @@ function search(e?: any) {
   )
     return
   const currentSearch = searchList[curSearchIndex.value]
-  window.open(`${currentSearch.url}?${currentSearch.wd}=${keyword.value}`)
+  const searchUrl = new URL(currentSearch.url)
+  searchUrl.searchParams.set(currentSearch.wd, keyword.value)
+  window.open(searchUrl.toString())
   clearNoticeKey()
   searchInputRef.value?.blur()
 }
