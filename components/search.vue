@@ -83,9 +83,15 @@ const searchList: Search[] = [
   }
 ]
 
+const DEFAULT_SEARCH_ENGINE: Search['key'] = 'Bing'
 const keyword = ref('')
-const curSearchIndex = ref(0)
+const curSearchIndex = ref(getDefaultSearchIndex())
 const searchInputRef = ref<HTMLInputElement>()
+
+function getDefaultSearchIndex() {
+  const index = searchList.findIndex(item => item.key === DEFAULT_SEARCH_ENGINE)
+  return index >= 0 ? index : 0
+}
 
 function getCurrentSearch() {
   return searchList[curSearchIndex.value]!
@@ -259,6 +265,8 @@ function setInactive(_: number) {
 }
 
 onMounted(() => {
+  // 每次进入导航页都从必应开始，避免复用旧页面状态
+  curSearchIndex.value = getDefaultSearchIndex()
   window.addEventListener('keydown', handleFocusShortcut)
 })
 onUnmounted(() => {
