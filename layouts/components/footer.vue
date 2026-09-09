@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <footer class="pt-2 w-full flex flex-row justify-between items-center relative">
     <div class="flex-1"></div>
 
@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useSessionStore } from '~/store/setting'
 

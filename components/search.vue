@@ -16,7 +16,7 @@
       <!-- Search engine logo -->
       <div top-0 left-4 w-6 h-6 mt-3 absolute v-on-click-outside="() => selectionVisible = false">
         <div hover="op-40" select-none h-full w-full flex-center cursor-pointer op="100" transition-300
-          @click="toggleSelection">
+          @click="handleSearchIconClick">
           <img :src="_getFavicon(searchList[curSearchIndex])" h-32 w-32>
         </div>
       </div>
@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { vOnClickOutside } from '@vueuse/components'
 import { debounce } from '@/utils/common'
 import searchEngine from '@/utils/search-engine'
@@ -65,6 +65,7 @@ type Search = {
   name: string
   key: string
   url: string
+  homeUrl: string
   wd: string
   favicon: string
   s: string
@@ -72,19 +73,23 @@ type Search = {
 
 const searchList: Search[] = [
   {
-    name: '百度', key: "Baidu", url: 'https://www.baidu.com/s', wd: 'wd', favicon: '/svg/baidu.svg', s: 'bd'
+    name: '必应', key: 'Bing', url: 'https://www.bing.com/search', homeUrl: 'https://www.bing.com/', wd: 'q', favicon: '/svg/bing.svg', s: 'bi'
   },
   {
-    name: 'Google', key: "Google", url: 'https://www.google.com/search', wd: 'q', favicon: '/svg/google.svg', s: 'gg'
+    name: 'Google', key: 'Google', url: 'https://www.google.com/search', homeUrl: 'https://www.google.com/', wd: 'q', favicon: '/svg/google.svg', s: 'gg'
   },
   {
-    name: '必应', key: "Bing", url: 'https://www.bing.com/search', wd: 'q', favicon: '/svg/bing.svg', s: 'bi'
+    name: '百度', key: 'Baidu', url: 'https://www.baidu.com/s', homeUrl: 'https://www.baidu.com/', wd: 'wd', favicon: '/svg/baidu.svg', s: 'bd'
   }
 ]
 
 const keyword = ref('')
 const curSearchIndex = ref(0)
 const searchInputRef = ref<HTMLInputElement>()
+
+function getCurrentSearch() {
+  return searchList[curSearchIndex.value]!
+}
 
 function search(e?: any) {
   if (
@@ -93,7 +98,7 @@ function search(e?: any) {
     || e?.isComposing
   )
     return
-  const currentSearch = searchList[curSearchIndex.value]
+  const currentSearch = getCurrentSearch()
   const searchUrl = new URL(currentSearch.url)
   searchUrl.searchParams.set(currentSearch.wd, keyword.value)
   window.open(searchUrl.toString())
@@ -112,7 +117,16 @@ function changeSearch(i: number) {
   selectionVisible.value = false
 }
 function toggleSelection() {
-  selectionVisible.value = !selectionVisible.value;
+  selectionVisible.value = !selectionVisible.value
+}
+
+function handleSearchIconClick(event: MouseEvent) {
+  if (event.ctrlKey || event.altKey) {
+    window.open(getCurrentSearch().homeUrl, '_blank', 'noopener')
+    return
+  }
+
+  toggleSelection()
 }
 
 function keyTable(e: Event) {
@@ -159,7 +173,7 @@ const handleComplete = (params: Params) => {
 }
 
 const requestEngApi = debounce(() => {
-  const curSearch = searchList[curSearchIndex.value]
+  const curSearch = getCurrentSearch()
   searchEngine.complete(curSearch.key as any, keyword.value, handleComplete)
 }, 100)
 
@@ -186,7 +200,7 @@ interface Params {
 }
 
 function jumpSearch(i: number) {
-  keyword.value = noticeKeyList.value[i]
+  keyword.value = noticeKeyList.value[i] ?? ''
   search()
 }
 
@@ -200,13 +214,13 @@ function clearNoticeKey() {
 function keyNext(e: Event) {
   e.preventDefault()
   selectedIndex.value = (selectedIndex.value + 1) % noticeKeyList.value.length || 0
-  keyword.value = noticeKeyList.value[selectedIndex.value]
+  keyword.value = noticeKeyList.value[selectedIndex.value] ?? ''
 }
 
 function keyPrev(e: Event) {
   e.preventDefault()
   selectedIndex.value = (selectedIndex.value - 1 + noticeKeyList.value.length) % noticeKeyList.value.length || 0
-  keyword.value = noticeKeyList.value[selectedIndex.value]
+  keyword.value = noticeKeyList.value[selectedIndex.value] ?? ''
 }
 
 function handleKeyRecomend(e: Event) {

@@ -1,3 +1,5 @@
+import { defineStore } from 'pinia'
+import { computed, nextTick, reactive, ref } from 'vue'
 import { useBookmarkStore } from '~/store/bookmarks'
 
 export type ActionType = 'add' | 'update'
@@ -34,6 +36,7 @@ export const useModalStore = defineStore('modal', () => {
     const action = ref<ActionType>('add')
     const target = ref<ActionTarget>('site')
     const title = computed(() => ACTION_NAME[action.value]() + TARGET_NAME[target.value]())
+    const canDelete = computed(() => action.value === 'update' && target.value !== 'category')
 
     const inputValues = reactive({
         name: '',
@@ -79,7 +82,6 @@ export const useModalStore = defineStore('modal', () => {
     }
     const deleteHandler = {
         site: () => bookmarkStore.deleteSite(),
-        category: () => bookmarkStore.deleteCategory(),
         domain: () => bookmarkStore.deleteDomain(),
     }
 
@@ -102,8 +104,11 @@ export const useModalStore = defineStore('modal', () => {
     }
 
     function handleDelete() {
+        if (!canDelete.value)
+            return
+
         nextTick(() => {
-            deleteHandler[target.value]()
+            deleteHandler[target.value as 'site' | 'domain']()
             handleCancel()
         })
     }
@@ -113,6 +118,7 @@ export const useModalStore = defineStore('modal', () => {
         action,
         target,
         title,
+        canDelete,
         inputValues,
         showModal,
         handleCancel,

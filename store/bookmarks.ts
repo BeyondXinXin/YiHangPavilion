@@ -1,4 +1,4 @@
-﻿import { defineStore } from 'pinia'
+import { defineStore } from 'pinia'
 import { computed, ref, watch } from 'vue'
 import type { Category, Domain, Site } from '@/utils/types'
 import presetBookmarksData from '@/utils/preset.json'
@@ -24,7 +24,7 @@ function loadBookmarkState(): BookmarkState {
     siteIndex: 0,
   }
 
-  if (!import.meta.client) {
+  if (typeof window === 'undefined') {
     return fallbackState
   }
 
@@ -49,7 +49,7 @@ function loadBookmarkState(): BookmarkState {
 }
 
 function persistBookmarkState(state: BookmarkState) {
-  if (!import.meta.client) {
+  if (typeof window === 'undefined') {
     return
   }
 
@@ -110,10 +110,6 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
     customData.value[domainIndex.value].categoryList[categoryIndex.value].siteList.splice(siteIndex.value, 1)
   }
 
-  function deleteCategory() {
-    customData.value[domainIndex.value].categoryList.splice(categoryIndex.value, 1)
-  }
-
   function deleteDomain() {
     customData.value.splice(domainIndex.value, 1)
   }
@@ -142,7 +138,6 @@ export const useBookmarkStore = defineStore('bookmarks', () => {
     updateCategory,
     updateDomain,
     deleteSite,
-    deleteCategory,
     deleteDomain,
     setDomainIndex,
   }

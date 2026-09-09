@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <NModal v-model:show="modalStore.modalVisible" preset="dialog" :show-icon="false" :closable="false">
     <template #header>
       <div>{{ modalStore.title }}</div>
@@ -32,7 +32,7 @@
     <template #action>
       <div flex gap-x-4 mt-6>
         <n-button @click="modalStore.handleCancel">取消</n-button>
-        <n-button v-if="modalStore.action === 'update'" type="error" @click="modalStore.handleDelete">
+        <n-button v-if="modalStore.canDelete" type="error" @click="modalStore.handleDelete">
           删除
         </n-button>
         <n-button type="primary" @click="handleCommit">确认</n-button>
@@ -42,6 +42,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { NButton, NInput, NModal } from 'naive-ui'
 import { useModalStore } from '~/store/modal'
 

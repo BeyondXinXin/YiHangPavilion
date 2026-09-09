@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div :key="`category-list-${bookmarkStore.domainIndex}-${forceRerender}`">
     <draggable
       class="m-y3 pt-0 flex flex-col items-center justify-center"
@@ -51,7 +51,7 @@
                   :class="{
                     'border-gray-800 border-dashed': sessionStore.isSetting,
                   }"
-                  @click="event => handleSiteClick(i, index, event)"
+                  @click="handleSiteClick(i, index, $event)"
                 />
               </div>
             </template>
@@ -89,6 +89,7 @@
 
 <script setup lang="ts">
 import draggable from 'vuedraggable'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { NButton, NIcon } from 'naive-ui'
 import SiteItemCard from '~/components/site-card.vue'
 import { useBookmarkStore } from '~/store/bookmarks'

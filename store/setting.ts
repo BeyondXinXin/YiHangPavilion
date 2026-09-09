@@ -1,4 +1,4 @@
-﻿import { defineStore } from 'pinia'
+import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 
 const SETTING_STORAGE_KEY = 'setting'
@@ -18,7 +18,7 @@ const defaultSettingState: SettingState = {
 }
 
 function loadSettingState(): SettingState {
-  if (!import.meta.client) {
+  if (typeof window === 'undefined') {
     return { ...defaultSettingState }
   }
 
@@ -38,7 +38,7 @@ function loadSettingState(): SettingState {
 }
 
 function persistSettingState(state: SettingState) {
-  if (!import.meta.client) {
+  if (typeof window === 'undefined') {
     return
   }
 

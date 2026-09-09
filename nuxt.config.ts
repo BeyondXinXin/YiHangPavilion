@@ -1,13 +1,8 @@
 ﻿import { siteConfig } from './site.config';
+import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   ssr: false,
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/'],
-    },
-  },
   modules: [
     '@unocss/nuxt',
     '@pinia/nuxt',
@@ -28,7 +23,7 @@ export default defineNuxtConfig({
         { charset: 'UTF-8' },
         { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       ],
-      noscript: [{ children: 'JavaScript is required' }],
+      noscript: [{ textContent: 'JavaScript is required' }],
       htmlAttrs: {
         lang: siteConfig.lang,
       },

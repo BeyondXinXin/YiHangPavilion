@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div flex flex-row items-center justify-center>
     <draggable
       w-[1200px]
@@ -46,6 +46,7 @@
 
 <script setup lang="ts">
 import draggable from 'vuedraggable'
+import { computed } from 'vue'
 import { NButton, NIcon } from 'naive-ui'
 import { useBookmarkStore } from '~/store/bookmarks'
 import { useModalStore } from '~/store/modal'
