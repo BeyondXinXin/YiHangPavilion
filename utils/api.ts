@@ -1,7 +1,3 @@
-﻿import { useBookmarkStore } from '~/store/bookmarks'
-import { useSettingStore } from '~/store/setting'
-import type { Domain } from '~/utils/types'
-
 const API_URL = 'https://api.beyondxin.top/api/yihang/data'
 
 function createApiUrl(passphrase: string) {
@@ -10,49 +6,31 @@ function createApiUrl(passphrase: string) {
   return url
 }
 
-async function parseError(response: Response) {
-  try {
-    return await response.text()
-  } catch {
-    return response.statusText
+export async function pushBookmarkHtml(passphrase: string, html: string): Promise<void> {
+  const response = await fetch(createApiUrl(passphrase), {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain;charset=UTF-8',
+    },
+    body: html,
+  })
+
+  if (!response.ok) {
+    throw new Error(await response.text())
   }
 }
 
-export async function pushDataToServer() {
-  const bookmarkStore = useBookmarkStore()
-  const settingStore = useSettingStore()
+export async function fetchBookmarkHtml(passphrase: string): Promise<string | null> {
+  const response = await fetch(createApiUrl(passphrase), { cache: 'no-store' })
 
-  try {
-    const response = await fetch(createApiUrl(settingStore.passphrase), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(bookmarkStore.customData),
-    })
-
-    if (!response.ok) {
-      throw new Error(await parseError(response))
-    }
-  } catch (error) {
-    console.error('Error pushing data to server:', error)
+  if (response.status === 404) {
+    return null
   }
-}
 
-export async function retrieveDataFromServer() {
-  const bookmarkStore = useBookmarkStore()
-  const settingStore = useSettingStore()
-
-  try {
-    const response = await fetch(createApiUrl(settingStore.passphrase))
-
-    if (!response.ok) {
-      throw new Error(await parseError(response))
-    }
-
-    const data = await response.json() as Domain[]
-    bookmarkStore.customData = data
-  } catch (error) {
-    console.error('Error retrieving data from server:', error)
+  if (!response.ok) {
+    throw new Error(await response.text())
   }
+
+  const html = await response.text()
+  return html || null
 }

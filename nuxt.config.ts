@@ -7,9 +7,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
   ],
-  build: {
-    transpile: ['naive-ui', 'vueuc'],
-  },
   app: {
     rootId: 'nuxt-root',
     head: {
@@ -42,12 +39,6 @@ export default defineNuxtConfig({
     enabled: false,
   },
   vite: {
-    optimizeDeps: {
-      include: ['naive-ui', 'vueuc'],
-    },
-    ssr: {
-      noExternal: ['naive-ui', 'vueuc'],
-    },
     server: {
       hmr: {
         overlay: false,

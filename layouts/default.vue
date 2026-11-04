@@ -1,6 +1,6 @@
-﻿<template>
-  <div w-full p-5 flex flex-col min-h-screen>
-    <main flex-1 mx-auto>
+<template>
+  <div class="flex min-h-screen w-full flex-col p-5">
+    <main class="mx-auto flex w-full flex-1 flex-col">
       <slot />
     </main>
 
